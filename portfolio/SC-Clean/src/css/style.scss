@@ -1,0 +1,26 @@
+@import "fonts";
+@import "mixin";
+*, *:after, *:before{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  background: rgb(255, 255, 255);
+}
+body{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+@import "header/header";
+@import "main/main";
+@import "footer/footer";
+

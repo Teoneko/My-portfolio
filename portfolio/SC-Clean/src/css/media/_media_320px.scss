@@ -1,0 +1,117 @@
+@media screen and (max-width: 320px){
+  .header{
+    &__address {
+      display: none;
+    }
+    .nav__menu {
+      width: 50%;
+    }
+    .menu__wrap {
+      width: 100%;
+    }
+  }
+  .main{
+    &__intro .intro__title {
+      font-size: 36px;
+    }
+    &__why_us{
+      padding: 65px 0 45px;
+      & .why_us__wrap{
+        margin-top: 30px;
+      }
+      & .why_us__title {
+        font-size: 28px;
+      }
+      & .why_us__box {
+        margin-bottom: 20px;
+      }
+    }
+    &__service{
+      padding: 65px 0 45px;
+      .service__title{
+        font-size: 28px;
+      }
+    }
+    &__goods{
+      padding: 65px 0 45px;
+      .goods__title{
+        font-size: 28px;
+      }
+    }
+    .clients__text {
+      .text__title {
+        font-size: 22px;
+      }
+      .text__desc {
+        font-size: 18px;
+      }
+    }
+    &__reviews .reviews__title {
+      font-size: 28px;
+      text-align: center;
+    }
+    .slider__next {
+      right: -35px !important;
+    }
+    .slider__prev {
+      left: -35px !important;
+    }
+    &__partners .partners__images {
+      width: 100%;
+    }
+    &__text .text__title {
+      font-size: 28px;
+    }
+    &__text .text__subtitle {
+      font-size: 22px;
+    }
+    &__request .request__title--white {
+      font-size: 28px;
+    }
+    &__request .request__form input {
+      font-size: 12px;
+      width: 90%;
+    }
+    &__request .request__form input[type=submit] {
+      width: 90%;
+      font-size: 12px;
+    }
+  }
+  .main__header .header__title{
+    text-align: center;
+  }
+  .main__header{
+    background-size: cover;
+  }
+  .main__header .header__crumbs{
+    text-align: center;
+  }
+  .main__item .item__desc .desc__point{
+    padding: 15px;
+  }
+  .main__item .item__character {
+    width: 100%;
+  }
+  .main__item .item__title{
+    text-align: center;
+  }
+  .main__item .item__question{
+    position: relative;
+    order: 2;
+  }
+  .main__item .item__desc{
+    min-height: 630px;
+  }
+  .main__item .item__adds .adds__slider .slick-arrow{
+    display: none !important;
+  }
+  .main__item .item__block{
+    justify-content: center;
+  }
+  .main__category .category__item .item__wrap {
+    width: 95%;
+  }
+  .main__category .category__text .text__title{
+    line-height: 1;
+  }
+}

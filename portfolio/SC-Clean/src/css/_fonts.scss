@@ -1,0 +1,61 @@
+
+@font-face {
+  font-family: "Futura Book C";
+  src: url("../fonts/FuturaBookC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Futura Book C";
+  src: url("../fonts/FuturaBookC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Futura Demi C";
+  src: url("../fonts/FuturaDemiC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Futura Demi C";
+  src: url("../fonts/FuturaDemiC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Futura Light C";
+  src: url("../fonts/FuturaLightC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Futura Demi C";
+  src: url("../fonts/FuturaLightC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Futura Medium C";
+  src: url("../fonts/FuturaMediumC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Futura Medium C";
+  src: url("../fonts/FuturaMediumC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "PT Rouble Sans";
+  src: url("../fonts/RUBSN.otf") format("opentype");
+}
+.rub_icon{
+  font-family: "PT Rouble Sans";
+  font-size: 16px;
+  font-style: normal;
+}

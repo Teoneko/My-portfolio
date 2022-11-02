@@ -1,0 +1,332 @@
+@media screen and (max-width:1919px){
+    .owl-hover{
+        display: none;
+    }
+}
+@media screen and (max-width:1270px){
+    html{
+        font-size: 9px;
+    }
+    .head, .products-block, .call-back, .carousel-center h2, .offer, .price, .why, .faq, .faq-bot, .footer{
+        width: 100%;
+    }
+    .head{
+        height: 275px;
+    }
+    .header{
+        background: url(../img/intro-red.jpg) 44% no-repeat;
+    }
+    .call-txt {
+        text-align: center;
+    }
+    .call-txt h2:after {
+        margin-left: 8rem;
+    }
+    #offer{
+        height: 850px;
+        margin-top: 5rem;
+    }
+    .offer{
+        height: 100%;
+    }
+    .why h2:after {
+        margin-left: 15rem;
+    }
+    .contacts {
+        width: 45%;
+    }
+    .contacts .office:last-child{
+        margin-bottom: 5rem;
+    }
+    .calc-box-form{
+        margin-top: 1rem;
+    }
+    .owl-hover{
+        display: none;
+    }
+    .modalDialog > div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:1024px){
+    html{
+        font-size: 8px;
+    }
+    .product{
+        width: 32%;
+    }
+    .top-logo p{
+        width: 28%;
+    }
+}
+
+@media screen and (max-width:768px){
+    html{
+        font-size: 7px;
+    }
+    .head {
+        height: 220px;
+    }
+    .top-logo{
+        flex-direction: column;
+    }
+    .product {
+        width: 45%;
+    }
+    .product:before{
+        /*display: none;*/
+    }
+    .top-phone{
+        flex-direction: column;
+    }
+    .bot-intro span {
+        z-index: 2;
+    }
+    .bot-intro img{
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+    .top-logo p{
+        width: 75%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .call-img{
+        display: none;
+    }
+    .red-back {
+        margin-top: 0;
+    }
+    .call-back{
+        margin-top: 0;
+    }
+    .call-txt h2:after {
+        margin-left: 13rem;
+    }
+    .call-txt p {
+        margin-top: 0.2rem;
+    }
+    .checkbox {
+        font-size: 1.7rem;
+    }
+    #offer {
+        height: 685px;
+    }
+    .calc-top{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .calc-box{
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0.5rem  auto;
+    }
+    .calc-bot{
+        margin: 1rem auto;
+    }
+    .faq-bot {
+        min-height: 0;
+    }
+    .footer{
+        height: 100%;
+    }
+    .bot-logo{
+        flex-grow: 1 !important;
+        margin: 1rem auto;
+    }
+    .modalDialog > div {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 540px){
+    .header{
+        background: none;
+    }
+    .head {
+        height: 100%;
+    }
+    .top {
+        flex-direction: column;
+    }
+    .top-calc a{
+        color: black;
+    }
+    .top-logo{
+        margin-top: 2rem;
+    }
+    .top-calc{
+        justify-content: center;
+    }
+    .top-phone a:first-child{
+        color: black;
+    }
+    .top-phone{
+        margin: 2rem auto;
+        flex-direction: row;
+    }
+    .bot{
+        background: red;
+        margin-top: 0;
+        padding: 2rem 1rem;
+    }
+    .bot-intro img{
+        display: none;
+    }
+    .bot-intro span{
+        font-size: 4.5rem;
+        color: white;
+        text-align: center;
+    }
+    .bot-intro:after {
+        margin-left: 20rem;
+        margin-top: 6rem;
+    }
+    .products-block h2{
+        text-align: center;
+        margin: 2rem auto;
+    }
+    h2:after {
+        margin-top: 1rem;
+        margin-left: 23rem;
+    }
+    .product {
+        width: 70%;
+        margin-top: 0;
+    }
+    .call-back {
+        flex-direction: column;
+    }
+    .call-back-form{
+        margin-bottom: 3rem;
+    }
+    .call-txt h2:after {
+        margin-left: 18rem;
+    }
+    #offer {
+        height: 100%;
+        margin-top: 0;
+    }
+    .offer-form {
+         width: 85%;
+     }
+    .calc-bot {
+        flex-direction: column;
+    }
+    .calc-bot span:nth-child(2){
+        margin: 2rem auto;
+        width: 25%;
+    }
+    .why-us{
+        flex-wrap: wrap;
+    }
+    .why-box{
+        width: 30%;
+    }
+    .why h2, .price h2{
+        text-align: center;
+        width: 100%;
+    }
+    .price h2:after {
+        margin-left: 16rem;
+    }
+    .why h2:after {
+        margin-left: 16rem;
+    }
+    .call-txt h2:after {
+        margin-left: 16rem;
+    }
+    .faq-form {
+        width: 90%;
+    }
+    .four-box{
+        width: 50%;
+    }
+    .contact{
+        flex-direction: column;
+        width: 100%;
+    }
+    .map, .contacts{
+        width: 100%;
+    }
+    .footer, .top-phone {
+        flex-direction: column;
+    }
+    .top-phone{
+        margin-top: 0;
+    }
+    .top-phone a:first-child {
+        margin-bottom: 2rem;
+    }
+    .contacts h2:after {
+        margin-left: 14rem;
+    }
+    .contacts h2{
+        text-align: center;
+    }
+    .contacts .office:last-child{
+        margin-bottom: 1rem;
+    }
+    .office{
+        padding-left: 5rem;
+    }
+    #carousel{
+        display: none;
+    }
+    .modalDialog > div {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 427px){
+    .bot-intro:after{
+        display: none;
+    }
+    h2:after{
+        display: none !important;
+    }
+    .product:before {
+         display: none;
+    }
+    .faq-wrap {
+        width: 80%;
+    }
+    .faq-title:after {
+        right: 0;
+    }
+    .offer-body{
+        flex-direction: column;
+    }
+    .choice-off, .win-off{
+        width: 100%;
+    }
+    .win-back img{
+        padding-top: 2rem;
+    }
+    .faq-title:after{
+        width: 25px;
+        height: 25px;
+        background:url(../img/down.png) center no-repeat;
+        background-size: contain;
+    }
+    .faq-title.selected:after{
+        background:url(../img/up.png) center no-repeat;
+        background-size: contain;
+    }
+    .faq-bot h3{
+        text-align: center;
+    }
+    .bot-intro span{
+        font-size: 3.5rem;
+    }
+    .modalDialog > div {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 425px){
+    .calc-box {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,28 @@
+$main-blue: #5101A6;
+$main-red: #DA251D;
+$sup-gray: #D3E1E5;
+$sup-grayLght: #EFEFEF;
+$sup-grayDrk: #4E4E4E;
+
+.bg-light-gray{
+  background-color: $sup-grayLght;
+}
+.bg-dark-gray{
+  background-color: $sup-grayDrk;
+}
+.animated.normalest {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+.animated.delay-05s {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+
+
+

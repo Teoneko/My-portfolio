@@ -1,0 +1,21 @@
+.slick{
+  position: relative;
+  display: flex;
+  width: calc(100% - 60px);
+  margin-left: 60px;
+  height: 25vw;
+  &-arrow:before, &-arrow:after{
+    color: $sup_color;
+  }
+  &__img{
+    filter: brightness(.5);
+    transition: .5s;
+    &.slick-active{
+      filter: brightness(1);
+      transition: .5s;
+    }
+    & img{
+      height: 100%;
+    }
+  }
+}

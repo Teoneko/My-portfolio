@@ -1,0 +1,3649 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Futura Book C";
+  src: url("../fonts/FuturaBookC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "Futura Book C";
+  src: url("../fonts/FuturaBookC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400; }
+@font-face {
+  font-family: "Futura Demi C";
+  src: url("../fonts/FuturaDemiC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Futura Demi C";
+  src: url("../fonts/FuturaDemiC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal; }
+@font-face {
+  font-family: "Futura Light C";
+  src: url("../fonts/FuturaLightC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "Futura Demi C";
+  src: url("../fonts/FuturaLightC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal; }
+@font-face {
+  font-family: "Futura Medium C";
+  src: url("../fonts/FuturaMediumC.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold; }
+@font-face {
+  font-family: "Futura Medium C";
+  src: url("../fonts/FuturaMediumC-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold; }
+@font-face {
+  font-family: "PT Rouble Sans";
+  src: url("../fonts/RUBSN.otf") format("opentype"); }
+.rub_icon {
+  font-family: "PT Rouble Sans";
+  font-size: 16px;
+  font-style: normal; }
+
+*, *:after, *:before {
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  background: white; }
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto; }
+
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .header__info {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 70px;
+    height: auto;
+    margin: 20px 0;
+    z-index: 210; }
+  .header__logo {
+    position: relative;
+    display: flex;
+    width: max-content;
+    height: max-content;
+    align-items: center;
+    justify-content: center; }
+    .header__logo img {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      max-width: 190px; }
+  .header__address {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    font-family: "Futura Book C";
+    font-size: 1rem;
+    line-height: 16px;
+    font-weight: 400; }
+    .header__address .address__city {
+      color: #001334;
+      font-weight: 600; }
+      .header__address .address__city:before {
+        position: absolute;
+        content: url("../img/header/location_icon.svg");
+        left: -8.5%; }
+    .header__address .address__street {
+      color: #858585; }
+  .header__phone {
+    position: relative;
+    display: flex;
+    width: max-content;
+    height: max-content;
+    flex-direction: column;
+    color: #858585;
+    font-family: "Futura Book C";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px; }
+    .header__phone .phone__number {
+      color: #00adef;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none; }
+      .header__phone .phone__number:hover {
+        text-decoration: underline; }
+    .header__phone .phone__time {
+      font-weight: 300; }
+      .header__phone .phone__time sup {
+        display: inline-block;
+        font-size: 8px;
+        transform: translateY(10%); }
+  .header__mail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    color: #858585;
+    font-family: "Futura Book C";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 16px; }
+    .header__mail .mail__text {
+      color: #001334;
+      font-weight: 600; }
+    .header__mail .mail__address {
+      color: #858585; }
+      .header__mail .mail__address:hover {
+        text-decoration: none; }
+  .header__cart {
+    position: relative;
+    display: flex;
+    width: max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: stretch; }
+    .header__cart .cart__icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      z-index: 300; }
+      .header__cart .cart__icon .icon__wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .header__cart .cart__icon .icon__img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .header__cart .cart__icon .icon__number {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        transform: translate(35%, -35%);
+        background: #858585;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        color: #fefefe;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px; }
+        .header__cart .cart__icon .icon__number.active {
+          background-color: #2fb441; }
+    .header__cart .cart__text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      height: max-content;
+      font-family: "Futura Book C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      z-index: 300; }
+      .header__cart .cart__text .text__intro {
+        color: #858585; }
+      .header__cart .cart__text .text__amount {
+        color: #001334;
+        font-weight: 600; }
+    .header__cart .cart__preview {
+      display: none;
+      z-index: 250;
+      position: absolute;
+      right: -30px;
+      top: -120%;
+      box-shadow: 0 3px 30px rgba(120, 120, 120, 0.15);
+      background-color: #ffffff;
+      width: 530px;
+      height: auto;
+      padding: 50px 30px 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; }
+      .header__cart .cart__preview.active {
+        display: flex; }
+      .header__cart .cart__preview .preview__title {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22.93px;
+        margin-bottom: 15px; }
+      .header__cart .cart__preview .preview__item {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        border-bottom: 1px solid #e9e9e9; }
+        .header__cart .cart__preview .preview__item .item__img {
+          position: relative;
+          display: flex;
+          align-items: center; }
+        .header__cart .cart__preview .preview__item .item__desc {
+          color: #001334;
+          font-family: "Futura Book C";
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          width: 35%;
+          text-decoration: none; }
+          .header__cart .cart__preview .preview__item .item__desc:hover {
+            text-decoration: underline; }
+        .header__cart .cart__preview .preview__item .item__price {
+          color: #001334;
+          font-family: "Futura Demi C";
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 16px;
+          width: 20%; }
+        .header__cart .cart__preview .preview__item .item__delete {
+          position: relative;
+          display: flex;
+          background: none;
+          border: 0 none;
+          width: 15px;
+          height: 15px;
+          padding: 0;
+          cursor: pointer; }
+          .header__cart .cart__preview .preview__item .item__delete:before, .header__cart .cart__preview .preview__item .item__delete:after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            content: '';
+            width: 13px;
+            height: 2px;
+            background-color: #a8a8a8;
+            transition: .2s;
+            border-radius: 1px; }
+          .header__cart .cart__preview .preview__item .item__delete:before {
+            transform: rotate(-45deg); }
+          .header__cart .cart__preview .preview__item .item__delete:after {
+            transform: rotate(45deg); }
+          .header__cart .cart__preview .preview__item .item__delete:hover:before, .header__cart .cart__preview .preview__item .item__delete:hover:after {
+            background-color: #001334; }
+      .header__cart .cart__preview .preview__footer {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px; }
+        .header__cart .cart__preview .preview__footer .footer__total {
+          position: relative;
+          display: flex;
+          width: max-content;
+          flex-direction: column; }
+          .header__cart .cart__preview .preview__footer .footer__total .total__title {
+            color: #001334;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px; }
+          .header__cart .cart__preview .preview__footer .footer__total .total__price {
+            color: #001334;
+            font-family: "Futura Demi C";
+            font-size: 34px;
+            font-weight: 400; }
+        .header__cart .cart__preview .preview__footer .footer__button {
+          box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+          border-radius: 35px;
+          background-color: #00aeff;
+          color: #fefefe;
+          font-family: "Futura Demi C";
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.7px;
+          padding: 17px 48px;
+          text-decoration: none;
+          transition: .2s;
+          text-align: center; }
+          .header__cart .cart__preview .preview__footer .footer__button:hover {
+            transition: .2s;
+            background-color: #00a2ff;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  .header__nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 200; }
+  .header .nav__wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+  .header .nav__menu {
+    position: relative;
+    display: none;
+    width: 23%;
+    height: calc(100% + 2px);
+    background: #00adef;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Futura Book C";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none; }
+    .header .nav__menu img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 15px; }
+  .header .nav__points {
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center; }
+  .header .nav__point {
+    position: relative;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 5px; }
+    .header .nav__point.active {
+      border-top: 3px solid #00adef;
+      border-radius: 1px;
+      transform: translateY(-2px);
+      height: 105%; }
+    .header .nav__point.visit {
+      border-top: 3px solid #00adef;
+      border-radius: 1px;
+      transform: translateY(-2px);
+      height: 105%; }
+  .header .nav__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #001334;
+    font-family: "Futura Demi C";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none; }
+  .header .nav__put_in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    margin-left: 5px; }
+    .header .nav__put_in.active {
+      transform: rotate(180deg);
+      transition: .2s; }
+  .header .nav__pop_up {
+    position: absolute;
+    display: none;
+    padding: 15px 70px 20px 30px;
+    list-style: none;
+    flex-direction: column;
+    box-shadow: 0 3px 30px rgba(120, 120, 120, 0.15);
+    background-color: #ffffff;
+    left: -30px;
+    top: 48px;
+    width: max-content; }
+    .header .nav__pop_up.active {
+      display: flex; }
+    .header .nav__pop_up .pop_up__point {
+      position: relative;
+      display: flex;
+      width: calc(100% + 70px);
+      align-items: center;
+      justify-content: flex-start; }
+    .header .nav__pop_up .pop_up__link {
+      color: #001334;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 46px;
+      width: max-content;
+      text-decoration: none;
+      transition: .2s; }
+      .header .nav__pop_up .pop_up__link.active {
+        color: #00adef;
+        transition: .2s;
+        flex-grow: 1; }
+    .header .nav__pop_up .pop_up__put_in {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 7px;
+      margin-right: 20px;
+      transform: rotate(-90deg) translateX(-1px);
+      opacity: 1;
+      fill: #001334; }
+      .header .nav__pop_up .pop_up__put_in.active {
+        fill: #00adef; }
+  .header .nav__deep_pop_up {
+    position: absolute;
+    display: none;
+    padding: 0 70px 5px 30px;
+    list-style: none;
+    flex-direction: column;
+    box-shadow: 0 3px 30px rgba(120, 120, 120, 0.15);
+    background-color: #ffffff;
+    width: max-content;
+    left: 100%; }
+    .header .nav__deep_pop_up.active {
+      display: flex; }
+    .header .nav__deep_pop_up .deep_pop_up__point {
+      position: relative;
+      display: flex;
+      width: max-content;
+      height: max-content;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px; }
+    .header .nav__deep_pop_up .deep_pop_up__link {
+      color: #001334;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 46px;
+      transition: .2s;
+      text-decoration: none; }
+      .header .nav__deep_pop_up .deep_pop_up__link:hover {
+        color: #00adef;
+        transition: .2s; }
+  .header .nav__search {
+    position: relative;
+    display: flex;
+    width: 23%;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; }
+    .header .nav__search .search__input {
+      position: relative;
+      display: flex;
+      width: 100%;
+      color: #858585;
+      height: calc(100% + 2px);
+      background-color: #f8f8f8;
+      border: 1px solid #e9e9e9;
+      font-family: "Futura Book C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      padding: 0 20px; }
+      .header .nav__search .search__input.active {
+        background: white; }
+    .header .nav__search .search__submit {
+      position: absolute;
+      z-index: 100;
+      right: 20px;
+      background: url("../img/header/search_icon.svg") center no-repeat;
+      border: 0 none;
+      cursor: pointer;
+      outline: none;
+      transition: .2s; }
+      .header .nav__search .search__submit:hover {
+        transition: .2s;
+        background: url("../img/header/search_icon_active.svg") center no-repeat; }
+  .header .menu__pop-up {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .header .menu__pop-up.active {
+      display: flex; }
+  .header .menu__background {
+    background: rgba(0, 0, 0, 0.8);
+    width: 75%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh; }
+  .header .menu__wrap {
+    position: relative;
+    display: flex;
+    width: 35%;
+    height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+  .header .menu__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #e9e9e9;
+    height: 111px;
+    min-height: 111px; }
+    .header .menu__header .header__logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: 100%; }
+    .header .menu__header .header__close {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%); }
+  .header .menu__body {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%; }
+    .header .menu__body .nav__points {
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: max-content;
+      align-items: flex-start;
+      margin: 25px 0;
+      max-height: 90%;
+      overflow-y: scroll; }
+      .header .menu__body .nav__points::-webkit-scrollbar {
+        width: 5px; }
+      .header .menu__body .nav__points::-webkit-scrollbar-track {
+        background-color: #e9e9e9;
+        border-radius: 3px; }
+      .header .menu__body .nav__points::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #00adef; }
+    .header .menu__body .nav__point {
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 0; }
+      .header .menu__body .nav__point.active {
+        border: 0 none;
+        transform: translateY(0);
+        height: 100%; }
+    .header .menu__body .nav__link {
+      padding-left: 25%;
+      margin: 5px 0; }
+    .header .menu__body .nav__pop_up {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: #f8f8f8;
+      box-shadow: 0 0;
+      margin: 5px 0;
+      padding: 15px 0; }
+      .header .menu__body .nav__pop_up .pop_up__point {
+        width: 100%;
+        padding: 10px 0 10px 25%;
+        flex-wrap: wrap; }
+      .header .menu__body .nav__pop_up .pop_up__link {
+        max-width: 60%;
+        line-height: 18px; }
+        .header .menu__body .nav__pop_up .pop_up__link.active {
+          flex-grow: 0; }
+      .header .menu__body .nav__pop_up .pop_up__put_in {
+        transform: rotate(0deg) translate(0px, 2px);
+        transition: .2s; }
+        .header .menu__body .nav__pop_up .pop_up__put_in.active {
+          transform: rotate(180deg);
+          transition: .2s; }
+    .header .menu__body .nav__deep_pop_up {
+      position: relative;
+      left: 0;
+      box-shadow: 0 0;
+      background-color: #f8f8f8;
+      padding-bottom: 0;
+      width: 100%; }
+      .header .menu__body .nav__deep_pop_up .deep_pop_up__link {
+        text-decoration: underline; }
+  .header .menu__footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 80px;
+    height: 170px;
+    min-height: 170px; }
+    .header .menu__footer .footer__wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      height: max-content; }
+    .header .menu__footer .footer__number {
+      color: #02a0dd;
+      font-family: "Futura Demi C";
+      font-size: 24px;
+      font-weight: 600;
+      text-decoration: none; }
+      .header .menu__footer .footer__number:hover {
+        text-decoration: underline; }
+    .header .menu__footer .footer__time {
+      color: #858585;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px; }
+      .header .menu__footer .footer__time sup {
+        font-size: 12px; }
+
+.main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .main__intro {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 31.041vw;
+    background: url("../img/header_main_background.png") top center no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; }
+    .main__intro .intro__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 64px;
+      font-weight: 400;
+      margin-bottom: 17px;
+      text-align: center; }
+      .main__intro .intro__title br {
+        display: none; }
+    .main__intro .intro__subtitle {
+      color: #001334;
+      font-family: "Futura Book C";
+      font-size: 28px;
+      font-weight: 400;
+      margin: 17px 0 60px; }
+    .main__intro .intro__button {
+      box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+      border-radius: 35px;
+      background-color: #00aeff;
+      color: #fefefe;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      padding: 17px 48px;
+      text-decoration: none;
+      transition: .2s;
+      text-align: center;
+      border: 0 none;
+      outline: none; }
+      .main__intro .intro__button:hover {
+        transition: .2s;
+        background-color: #00a2ff;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  .main__wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .main__why_us {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 115px 0 55px; }
+    .main__why_us .why_us__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__why_us .why_us__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__why_us .why_us__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 970px;
+      justify-content: space-around;
+      align-items: stretch;
+      margin-top: 70px;
+      flex-wrap: wrap; }
+    .main__why_us .why_us__box {
+      position: relative;
+      display: flex;
+      width: calc(40% - 70px);
+      margin-left: 70px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 60px; }
+      .main__why_us .why_us__box:nth-child(1):before {
+        content: '01';
+        position: absolute;
+        color: #bebebe;
+        font-family: "Futura Demi C";
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 24px;
+        top: 100px;
+        left: -40px;
+        transform: translate(-50%, -50%); }
+      .main__why_us .why_us__box:nth-child(2):before {
+        content: '02';
+        position: absolute;
+        color: #bebebe;
+        font-family: "Futura Demi C";
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 24px;
+        top: 100px;
+        left: -40px;
+        transform: translate(-50%, -50%); }
+      .main__why_us .why_us__box:nth-child(3):before {
+        content: '03';
+        position: absolute;
+        color: #bebebe;
+        font-family: "Futura Demi C";
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 24px;
+        top: 100px;
+        left: -40px;
+        transform: translate(-50%, -50%); }
+      .main__why_us .why_us__box:nth-child(4):before {
+        content: '04';
+        position: absolute;
+        color: #bebebe;
+        font-family: "Futura Demi C";
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 24px;
+        top: 100px;
+        left: -40px;
+        transform: translate(-50%, -50%); }
+      .main__why_us .why_us__box .box__img {
+        position: relative;
+        display: flex;
+        align-items: center; }
+      .main__why_us .why_us__box .box__title {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22.93px;
+        margin: 25px 0 20px; }
+      .main__why_us .why_us__box .box__desc {
+        position: relative;
+        width: 90%;
+        color: #636363;
+        font-family: "Futura Book C";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px; }
+  .main__service {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 115px 0 75px; }
+    .main__service .service__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__service .service__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__service .service__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      margin: 55px 0 45px; }
+    .main__service .service__box {
+      position: relative;
+      display: flex;
+      width: 47.5%;
+      height: 100%;
+      margin: 15px 0; }
+      .main__service .service__box .box__img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.8); }
+      .main__service .service__box .box__wrap {
+        position: absolute;
+        display: flex;
+        left: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: 100%; }
+      .main__service .service__box .box__title {
+        position: relative;
+        display: flex;
+        color: #fefeff;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22.93px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-shadow: 0 0 2px black; }
+      .main__service .service__box .box__button {
+        position: relative;
+        display: flex;
+        color: #ffffff;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.93px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 13px 45px;
+        border-radius: 35px;
+        border: 2px solid #ffffff;
+        transition: .2s;
+        text-shadow: 0 0 2px black; }
+        .main__service .service__box .box__button:hover {
+          transition: .2s;
+          border: 2px solid #00adef;
+          background-color: #00adef;
+          text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    .main__service .service__more {
+      color: #3bb51d;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 16px;
+      height: 18px;
+      border-bottom: 2px solid #3bb51d;
+      transition: .2s;
+      text-decoration: none;
+      border-radius: 1px; }
+      .main__service .service__more:hover {
+        transition: .2s;
+        border-bottom: 2px solid rgba(255, 255, 255, 0); }
+  .main__goods {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: rgba(245, 245, 245, 0);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 115px 0 75px; }
+    .main__goods .goods__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__goods .goods__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__goods .goods__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      margin: 55px 0 45px; }
+    .main__goods .goods__box {
+      position: relative;
+      display: flex;
+      width: 47.5%;
+      height: 100%;
+      margin: 15px 0; }
+      .main__goods .goods__box .box__img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.8); }
+      .main__goods .goods__box .box__wrap {
+        position: absolute;
+        display: flex;
+        left: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: 100%; }
+      .main__goods .goods__box .box__title {
+        position: relative;
+        display: flex;
+        color: #fefeff;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22.93px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-shadow: 0 0 2px black; }
+      .main__goods .goods__box .box__button {
+        position: relative;
+        display: flex;
+        color: #ffffff;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.93px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 13px 45px;
+        border-radius: 35px;
+        border: 2px solid #ffffff;
+        transition: .2s;
+        text-shadow: 0 0 2px black; }
+        .main__goods .goods__box .box__button:hover {
+          transition: .2s;
+          border: 2px solid #00adef;
+          background-color: #00adef;
+          text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    .main__goods .goods__more {
+      color: #3bb51d;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 16px;
+      height: 18px;
+      border-bottom: 2px solid #3bb51d;
+      transition: .2s;
+      text-decoration: none;
+      border-radius: 1px; }
+      .main__goods .goods__more:hover {
+        transition: .2s;
+        border-bottom: 2px solid rgba(255, 255, 255, 0); }
+  .main__price {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0; }
+    .main__price .price__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__price .price__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__price .price__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      margin-top: 60px;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+    .main__price .price__box {
+      position: relative;
+      display: flex;
+      width: 23%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+      background: #fff;
+      border-radius: 10px;
+      transition: .2s; }
+      .main__price .price__box:hover {
+        transition: .2s;
+        box-shadow: 0 3px 30px rgba(120, 120, 120, 0.15); }
+      .main__price .price__box .box__title {
+        text-align: center;
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px; }
+      .main__price .price__box .box__splash {
+        margin: 20px 0 30px;
+        display: block;
+        border: 0 none;
+        border-top: 2px solid #00adef;
+        width: 50px; }
+      .main__price .price__box .box__desc {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 50px; }
+        .main__price .price__box .box__desc b {
+          font-weight: 400;
+          font-size: 44px; }
+        .main__price .price__box .box__desc sup {
+          font-size: 12px;
+          margin-left: -5px; }
+      .main__price .price__box .box__button {
+        box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+        border-radius: 35px;
+        background-color: #00aeff;
+        color: #fefefe;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        padding: 17px 48px;
+        text-decoration: none;
+        transition: .2s;
+        text-align: center; }
+        .main__price .price__box .box__button:hover {
+          transition: .2s;
+          background-color: #00a2ff;
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  .main__clients {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1170px;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0; }
+    .main__clients .clients__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__clients .clients__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__clients .clients__slider {
+      width: 90%;
+      max-width: 1170px;
+      position: relative;
+      display: flex;
+      margin: 70px 0;
+      padding-bottom: 60px; }
+      .main__clients .clients__slider .slider__dots li {
+        width: 30px;
+        height: 3px; }
+        .main__clients .clients__slider .slider__dots li button {
+          width: 30px;
+          height: 3px; }
+          .main__clients .clients__slider .slider__dots li button:before {
+            content: '';
+            width: 30px;
+            height: 3px;
+            border-bottom: 3px solid #dadada;
+            transition: .2s; }
+        .main__clients .clients__slider .slider__dots li.slick-active button:before {
+          border-bottom: 3px solid #00adef;
+          transition: .2s; }
+      .main__clients .clients__slider .slider__prev {
+        border: 2px solid #dadada;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        transition: .2s;
+        top: 50%;
+        left: -35px; }
+        .main__clients .clients__slider .slider__prev:hover {
+          transition: .2s;
+          border: 2px solid #00adef; }
+          .main__clients .clients__slider .slider__prev:hover:before {
+            border-right: 2px solid #00adef;
+            border-top: 2px solid #00adef;
+            transition: .2s; }
+        .main__clients .clients__slider .slider__prev:before {
+          position: relative;
+          content: "";
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-right: 2px solid #dadada;
+          border-top: 2px solid #dadada;
+          transition: .2s;
+          transform: rotate(225deg);
+          margin-left: 15%; }
+      .main__clients .clients__slider .slider__next {
+        border: 2px solid #dadada;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        transition: .2s;
+        top: 50%;
+        right: -35px; }
+        .main__clients .clients__slider .slider__next:hover {
+          transition: .2s;
+          border: 2px solid #00adef; }
+          .main__clients .clients__slider .slider__next:hover:before {
+            border-right: 2px solid #00adef;
+            border-top: 2px solid #00adef;
+            transition: .2s; }
+        .main__clients .clients__slider .slider__next:before {
+          position: relative;
+          content: "";
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-right: 2px solid #dadada;
+          border-top: 2px solid #dadada;
+          transition: .2s;
+          transform: rotate(45deg);
+          margin-right: 15%; }
+      .main__clients .clients__slider .slider__next, .main__clients .clients__slider .slider__prev {
+        top: 38.5%; }
+    .main__clients .clients__img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none; }
+      .main__clients .clients__img img {
+        max-width: 200px;
+        width: 100%;
+        border-radius: 50%;
+        align-items: center; }
+    .main__clients .clients__text {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start; }
+      .main__clients .clients__text .text__title {
+        position: relative;
+        width: 30%;
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 36px; }
+      .main__clients .clients__text .text__desc {
+        position: relative;
+        width: 65%;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 20px;
+        font-weight: 400; }
+        .main__clients .clients__text .text__desc span {
+          line-height: 28px; }
+        .main__clients .clients__text .text__desc ul {
+          line-height: 36px;
+          padding: 0; }
+          .main__clients .clients__text .text__desc ul li {
+            line-height: 30px;
+            padding: 0 0 0 20px;
+            list-style: none; }
+            .main__clients .clients__text .text__desc ul li:before {
+              position: absolute;
+              margin-left: -20px;
+              content: url("../img/li_point.svg"); }
+  .main__reviews {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 0; }
+    .main__reviews .reviews__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      margin-top: 60px;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+    .main__reviews .reviews__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__reviews .reviews__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__reviews .reviews__slider {
+      width: 90%;
+      max-width: 1170px;
+      position: relative;
+      display: flex;
+      margin: 70px 0;
+      padding-bottom: 60px; }
+      .main__reviews .reviews__slider .slider__dots li {
+        width: 30px;
+        height: 3px; }
+        .main__reviews .reviews__slider .slider__dots li button {
+          width: 30px;
+          height: 3px; }
+          .main__reviews .reviews__slider .slider__dots li button:before {
+            content: '';
+            width: 30px;
+            height: 3px;
+            border-bottom: 3px solid #dadada;
+            transition: .2s; }
+        .main__reviews .reviews__slider .slider__dots li.slick-active button:before {
+          border-bottom: 3px solid #00adef;
+          transition: .2s; }
+      .main__reviews .reviews__slider .slider__prev {
+        border: 2px solid #dadada;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        transition: .2s;
+        top: 50%;
+        left: -35px; }
+        .main__reviews .reviews__slider .slider__prev:hover {
+          transition: .2s;
+          border: 2px solid #00adef; }
+          .main__reviews .reviews__slider .slider__prev:hover:before {
+            border-right: 2px solid #00adef;
+            border-top: 2px solid #00adef;
+            transition: .2s; }
+        .main__reviews .reviews__slider .slider__prev:before {
+          position: relative;
+          content: "";
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-right: 2px solid #dadada;
+          border-top: 2px solid #dadada;
+          transition: .2s;
+          transform: rotate(225deg);
+          margin-left: 15%; }
+      .main__reviews .reviews__slider .slider__next {
+        border: 2px solid #dadada;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        transition: .2s;
+        top: 50%;
+        right: -35px; }
+        .main__reviews .reviews__slider .slider__next:hover {
+          transition: .2s;
+          border: 2px solid #00adef; }
+          .main__reviews .reviews__slider .slider__next:hover:before {
+            border-right: 2px solid #00adef;
+            border-top: 2px solid #00adef;
+            transition: .2s; }
+        .main__reviews .reviews__slider .slider__next:before {
+          position: relative;
+          content: "";
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-right: 2px solid #dadada;
+          border-top: 2px solid #dadada;
+          transition: .2s;
+          transform: rotate(45deg);
+          margin-right: 15%; }
+      .main__reviews .reviews__slider .slider__next, .main__reviews .reviews__slider .slider__prev {
+        top: 45%; }
+    .main__reviews .reviews__img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none; }
+      .main__reviews .reviews__img .img__wrap {
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 3px 30px rgba(120, 120, 120, 0.15);
+        border-radius: 10px;
+        background-color: #ffffff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        padding: 10px; }
+        .main__reviews .reviews__img .img__wrap img {
+          position: relative;
+          width: 100%;
+          align-items: center; }
+  .main__partners {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    padding: 100px 0 70px;
+    justify-content: space-between; }
+    .main__partners .partners__text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 55%; }
+    .main__partners .partners__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 36px;
+      margin-bottom: 20px; }
+    .main__partners .partners__desc {
+      color: #636363;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 30px; }
+    .main__partners .partners__images {
+      position: relative;
+      display: flex;
+      width: 40%;
+      flex-direction: column; }
+      .main__partners .partners__images .images__title {
+        text-align: center;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px; }
+      .main__partners .partners__images .images__box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        max-height: 180px; }
+        .main__partners .partners__images .images__box img {
+          position: relative;
+          display: flex;
+          align-items: center; }
+      .main__partners .partners__images .images__splash {
+        height: 1px;
+        border: 0 none;
+        border-bottom: 1px dashed #bebebe; }
+  .main__text {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 70px; }
+    .main__text .text__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 60px; }
+      .main__text .text__title hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+    .main__text .text__desc {
+      color: #636363;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 10px; }
+    .main__text .text__box {
+      position: relative;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between; }
+    .main__text .text__list {
+      position: relative;
+      display: flex;
+      width: 40%;
+      flex-direction: column;
+      padding: 0 0 30px;
+      list-style: none;
+      color: #636363;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px; }
+      .main__text .text__list__title {
+        padding-bottom: 15px;
+        line-height: 24px; }
+    .main__text .text__button--blue {
+      position: relative;
+      display: flex;
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22.93px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 13px 45px;
+      border-radius: 35px;
+      border: 2px solid #ffffff;
+      transition: .2s;
+      text-shadow: 0 0 2px black;
+      color: #00adef;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      border: 2px solid #00adef;
+      text-shadow: 0 0;
+      box-shadow: 0 0;
+      padding: 10px 30px;
+      margin: 50px 0; }
+      .main__text .text__button--blue:hover {
+        transition: .2s;
+        border: 2px solid #00adef;
+        background-color: #00adef;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+      .main__text .text__button--blue:hover {
+        color: white; }
+    .main__text .text__subtitle {
+      margin: 20px 0;
+      text-align: center;
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 38px; }
+      .main__text .text__subtitle a {
+        color: #00adef;
+        text-decoration: none; }
+        .main__text .text__subtitle a:hover {
+          text-decoration: underline; }
+  .main__request {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: url("../img/main_request_background.png") center center no-repeat, #2a9010;
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-blend-mode: multiply; }
+    .main__request .request__title--white {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff; }
+      .main__request .request__title--white hr {
+        position: absolute;
+        display: block;
+        border: 0 none;
+        border-top: 3px solid #00adef;
+        width: 65px;
+        top: -30px; }
+      .main__request .request__title--white hr {
+        border-top: 3px solid #fff; }
+    .main__request .request__form {
+      width: 100%;
+      max-width: 1170px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 0 15px; }
+      .main__request .request__form input {
+        color: #858585;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding: 15px 35px;
+        border-radius: 35px;
+        border: 2px solid #dadada;
+        background-color: #ffffff;
+        width: 25%;
+        margin: 0 20px;
+        outline: none; }
+        .main__request .request__form input:hover {
+          border: 2px solid #00adef; }
+        .main__request .request__form input:focus {
+          border: 2px solid #00adef;
+          color: #001334; }
+        .main__request .request__form input:valid {
+          color: #001334; }
+      .main__request .request__form input[type=submit] {
+        position: relative;
+        display: flex;
+        color: #ffffff;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.93px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 13px 45px;
+        border-radius: 35px;
+        border: 2px solid #ffffff;
+        transition: .2s;
+        text-shadow: 0 0 2px black;
+        color: #00adef;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        border: 2px solid #00adef;
+        text-shadow: 0 0;
+        box-shadow: 0 0;
+        padding: 10px 30px;
+        margin: 50px 0;
+        width: 35%;
+        margin-left: 20px;
+        cursor: pointer;
+        padding: 15px 35px;
+        justify-content: center; }
+        .main__request .request__form input[type=submit]:hover {
+          transition: .2s;
+          border: 2px solid #00adef;
+          background-color: #00adef;
+          text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+        .main__request .request__form input[type=submit]:hover {
+          color: white; }
+    .main__request .request__desc {
+      color: #ffffff;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px; }
+  .main .request__background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.51);
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center; }
+    .main .request__background.active {
+      display: flex; }
+  .main .request__wrap {
+    position: relative;
+    display: flex;
+    width: 80%;
+    background: white;
+    flex-direction: column;
+    padding: 70px 0; }
+  .main .request__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url("../img/request_close.png");
+    border: 0 none;
+    cursor: pointer;
+    outline: none; }
+  .main .request__title {
+    color: #001334;
+    font-family: "Futura Demi C";
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center; }
+  .main .request__subtitle {
+    color: #001334;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Futura Book C";
+    font-weight: 600;
+    margin-top: 10px; }
+  .main__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: url("../img/header_background.png") top center no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .main__header .header__title {
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 22.93px;
+      margin-top: 45px; }
+    .main__header .header__splash {
+      width: 65px;
+      height: 3px;
+      border: 0 none;
+      border-bottom: 3px solid #00adef;
+      margin: 25px 0; }
+    .main__header .header__crumbs {
+      margin-bottom: 30px;
+      position: relative;
+      display: flex;
+      width: max-content; }
+      .main__header .header__crumbs .crumbs__link {
+        color: #ffffff;
+        font-family: "Futura Book C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-decoration: none; }
+        .main__header .header__crumbs .crumbs__link:hover {
+          color: #00aeff; }
+      .main__header .header__crumbs .crumbs__arrow {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 0 15px; }
+      .main__header .header__crumbs .crumbs__active {
+        color: #aab0c1;
+        font-family: "Futura Book C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-decoration: none; }
+  .main__contacts {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center; }
+    .main__contacts .contacts__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin: 50px 0 75px; }
+    .main__contacts .contacts__box {
+      position: relative;
+      display: flex;
+      width: 25%;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start; }
+      .main__contacts .contacts__box sup {
+        font-size: 10px; }
+    .main__contacts .contacts__img {
+      position: absolute;
+      top: 0;
+      left: -30px;
+      transform: translateX(-100%); }
+    .main__contacts .contacts__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22.93px;
+      margin-bottom: 25px; }
+    .main__contacts .contacts__desc {
+      color: #636363;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px; }
+    .main__contacts .contacts__phone {
+      color: #02a0dd;
+      font-family: "Futura Demi C";
+      font-weight: 600;
+      line-height: 28px;
+      text-decoration: none; }
+      .main__contacts .contacts__phone:hover {
+        text-decoration: underline; }
+    .main__contacts .contacts__mail {
+      color: #636363;
+      font-weight: 300;
+      line-height: 24px;
+      text-decoration: underline; }
+      .main__contacts .contacts__mail:hover {
+        text-decoration: none; }
+  .main__form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #f8f8f8;
+    align-items: center;
+    justify-content: center; }
+    .main__form .form__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 70px 0 30px; }
+    .main__form .form__title {
+      color: #001334;
+      line-height: 30px;
+      font-family: "Futura Demi C";
+      font-size: 30px;
+      font-weight: 600; }
+    .main__form .form__subtitle {
+      color: #001334;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px; }
+    .main__form .form__box {
+      margin-top: 20px;
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 750px;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+    .main__form .form__input--small {
+      color: #858585;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 15px 35px;
+      border-radius: 35px;
+      border: 2px solid #dadada;
+      background-color: #ffffff;
+      width: 25%;
+      margin: 0 20px;
+      outline: none;
+      font-size: 12px;
+      width: 30%;
+      margin: 20px 0; }
+      .main__form .form__input--small:hover {
+        border: 2px solid #00adef; }
+      .main__form .form__input--small:focus {
+        border: 2px solid #00adef;
+        color: #001334; }
+      .main__form .form__input--small:valid {
+        color: #001334; }
+    .main__form .form__input--big {
+      color: #858585;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 15px 35px;
+      border-radius: 35px;
+      border: 2px solid #dadada;
+      background-color: #ffffff;
+      width: 25%;
+      margin: 0 20px;
+      outline: none;
+      font-size: 12px;
+      width: 95%;
+      margin: 20px 0; }
+      .main__form .form__input--big:hover {
+        border: 2px solid #00adef; }
+      .main__form .form__input--big:focus {
+        border: 2px solid #00adef;
+        color: #001334; }
+      .main__form .form__input--big:valid {
+        color: #001334; }
+    .main__form .form__button {
+      position: relative;
+      display: flex;
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22.93px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 13px 45px;
+      border-radius: 35px;
+      border: 2px solid #ffffff;
+      transition: .2s;
+      text-shadow: 0 0 2px black;
+      color: #00adef;
+      font-family: "Futura Demi C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      border: 2px solid #00adef;
+      text-shadow: 0 0;
+      box-shadow: 0 0;
+      padding: 10px 30px;
+      margin: 50px 0;
+      width: 35%;
+      margin-left: 20px;
+      cursor: pointer;
+      padding: 15px 35px;
+      justify-content: center;
+      background: none;
+      padding: 15px 55px;
+      width: auto; }
+      .main__form .form__button:hover {
+        transition: .2s;
+        border: 2px solid #00adef;
+        background-color: #00adef;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+      .main__form .form__button:hover {
+        color: white; }
+  .main__map {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center; }
+  .main__category {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0 0; }
+    .main__category .category__sidebar {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 270px;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column; }
+      .main__category .category__sidebar .sidebar__box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border: 1px solid #e9e9e9;
+        height: auto;
+        margin-bottom: 30px; }
+        .main__category .category__sidebar .sidebar__box .box__title {
+          background-color: #00adef;
+          padding: 20px 30px;
+          color: #ffffff;
+          font-family: "Futura Demi C";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px; }
+        .main__category .category__sidebar .sidebar__box .box__categ {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          padding: 15px 30px 30px; }
+          .main__category .category__sidebar .sidebar__box .box__categ .categ__link {
+            color: #001334;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 38px;
+            text-decoration: none; }
+            .main__category .category__sidebar .sidebar__box .box__categ .categ__link sup {
+              font-size: 11px; }
+            .main__category .category__sidebar .sidebar__box .box__categ .categ__link:hover {
+              font-weight: 600; }
+              .main__category .category__sidebar .sidebar__box .box__categ .categ__link:hover sup {
+                color: #00aeff;
+                font-weight: 300;
+                line-height: 38px; }
+        .main__category .category__sidebar .sidebar__box .box__price_form {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 30px; }
+          .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range {
+            outline: none;
+            width: 100%;
+            -webkit-appearance: none;
+            background-color: rgba(233, 233, 233, 0); }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-thumb {
+              -webkit-appearance: none; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range:focus {
+              outline: none;
+              /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */ }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-track {
+              width: 100%;
+              cursor: pointer;
+              background: transparent;
+              /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+              border-color: transparent;
+              color: transparent; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              border: 0 solid rgba(0, 0, 0, 0);
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #00adef;
+              cursor: ew-resize;
+              margin-top: -3px;
+              /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-thumb {
+              cursor: ew-resize;
+              box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+              border: 0 none;
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #ffffff; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-thumb {
+              cursor: ew-resize;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+              border: 0 none;
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #ffffff; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-runnable-track {
+              width: 100%;
+              height: 8px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+              background: #00adef;
+              border-radius: 1.3px;
+              border: 0 solid #010101; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range:focus::-webkit-slider-runnable-track {
+              background: #00adef; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-track {
+              width: 100%;
+              height: 4px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+              background: #00adef;
+              border-radius: 1.3px;
+              border: 0 solid #010101; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-track {
+              cursor: ew-resize;
+              width: 100%;
+              height: 2px;
+              background: transparent;
+              border-color: transparent;
+              border-width: 16px 0;
+              color: transparent; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-lower {
+              background: #00adef;
+              border: 0 solid #010101;
+              border-radius: 2.6px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range:focus::-ms-fill-lower {
+              background: #00adef; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-upper {
+              background: #00adef;
+              border: 0 solid #010101;
+              border-radius: 2.6px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range:focus::-ms-fill-upper {
+              background: #00adef; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-runnable-track {
+              height: 4px;
+              -webkit-appearance: none;
+              color: #00adef;
+              margin-top: -1px;
+              background-color: #e9e9e9; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-progress {
+              background-color: #00adef; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-thumb {
+              background: #00adef; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-track {
+              background-color: #e9e9e9; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-lower {
+              background-color: #e9e9e9; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-upper {
+              background-color: #00adef; }
+          .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range_value {
+            color: #858585;
+            font-family: "Futura Book C";
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 48px; }
+            .main__category .category__sidebar .sidebar__box .box__price_form .price_form__range_value .rub_icon {
+              font-size: 11px;
+              margin-left: 1px; }
+          .main__category .category__sidebar .sidebar__box .box__price_form .price_form__wrap {
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px; }
+          .main__category .category__sidebar .sidebar__box .box__price_form .price_form__input {
+            position: relative;
+            display: flex;
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #e9e9e9; }
+        .main__category .category__sidebar .sidebar__box .box__catal {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          list-style: none;
+          padding: 0 0 40px 0; }
+          .main__category .category__sidebar .sidebar__box .box__catal .put_in:after {
+            position: relative;
+            display: inline-block;
+            content: url("../img/header/arrow.svg");
+            margin-left: 10px;
+            transform: translateY(-10%); }
+          .main__category .category__sidebar .sidebar__box .box__catal li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            width: 100%; }
+          .main__category .category__sidebar .sidebar__box .box__catal .catal__point {
+            color: #001334;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            text-decoration: none;
+            margin: 0 30px 0 30px;
+            width: calc(100% - 60px); }
+            .main__category .category__sidebar .sidebar__box .box__catal .catal__point:hover {
+              font-weight: 600; }
+          .main__category .category__sidebar .sidebar__box .box__catal .catal__deep {
+            position: relative;
+            display: none;
+            flex-direction: column;
+            margin-top: 15px;
+            padding: 0 0 30px 0;
+            list-style: none;
+            background-color: #f8f8f8; }
+            .main__category .category__sidebar .sidebar__box .box__catal .catal__deep.active {
+              display: flex; }
+            .main__category .category__sidebar .sidebar__box .box__catal .catal__deep li {
+              padding-top: 20px; }
+            .main__category .category__sidebar .sidebar__box .box__catal .catal__deep .deep__point {
+              color: #001334;
+              font-family: "Futura Book C";
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 18px;
+              text-decoration: none;
+              margin: 0 30px 0 30px; }
+              .main__category .category__sidebar .sidebar__box .box__catal .catal__deep .deep__point:hover {
+                font-weight: 600; }
+            .main__category .category__sidebar .sidebar__box .box__catal .catal__deep .deep__down {
+              position: relative;
+              display: none;
+              width: 100%;
+              padding-left: 50px;
+              flex-direction: column; }
+              .main__category .category__sidebar .sidebar__box .box__catal .catal__deep .deep__down.active {
+                display: flex; }
+              .main__category .category__sidebar .sidebar__box .box__catal .catal__deep .deep__down .down__point {
+                color: #001334;
+                font-family: "Futura Book C";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18px;
+                text-decoration: underline; }
+                .main__category .category__sidebar .sidebar__box .box__catal .catal__deep .deep__down .down__point:hover {
+                  font-weight: 600; }
+      .main__category .category__sidebar .sidebar__advert {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px; }
+        .main__category .category__sidebar .sidebar__advert .advert__box {
+          position: relative;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden; }
+        .main__category .category__sidebar .sidebar__advert .advert__act {
+          position: absolute;
+          display: flex;
+          z-index: 400;
+          top: -20px;
+          left: -10px;
+          color: #ffffff;
+          font-family: "Futura Demi C";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px;
+          height: 90px;
+          width: 90px;
+          background-color: #39b61b;
+          align-content: center;
+          justify-content: center;
+          flex-direction: column;
+          border-radius: 50%;
+          text-align: center; }
+        .main__category .category__sidebar .sidebar__advert .advert__img {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          z-index: 300; }
+        .main__category .category__sidebar .sidebar__advert .advert__desc {
+          color: #001334;
+          font-family: "Futura Book C";
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          margin: 15px 0 20px; }
+        .main__category .category__sidebar .sidebar__advert .advert__button {
+          box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+          border-radius: 35px;
+          background-color: #00aeff;
+          color: #fefefe;
+          font-family: "Futura Demi C";
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.7px;
+          padding: 17px 48px;
+          text-decoration: none;
+          transition: .2s;
+          text-align: center;
+          padding: 17px 0;
+          text-align: center;
+          width: 100%; }
+          .main__category .category__sidebar .sidebar__advert .advert__button:hover {
+            transition: .2s;
+            background-color: #00a2ff;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    .main__category .category__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 870px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column; }
+    .main__category .category__sorting {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 270px; }
+      .main__category .category__sorting .sorting__select {
+        width: 100%;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 20px 30px;
+        display: flex;
+        cursor: pointer;
+        border: 1px solid #e9e9e9;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: url("../img/header/arrow.svg") no-repeat 235px center; }
+      .main__category .category__sorting .sorting__option {
+        font-size: 16px;
+        padding: 20px 30px; }
+        .main__category .category__sorting .sorting__option:checked {
+          color: #858585; }
+        .main__category .category__sorting .sorting__option:hover {
+          font-weight: 600; }
+    .main__category .category__item {
+      position: relative;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 40px 0 40px; }
+      .main__category .category__item .item__wrap {
+        display: flex;
+        width: 100%;
+        max-width: 270px;
+        height: 450px;
+        box-shadow: 0 3px 20px rgba(120, 120, 120, 0.15);
+        background-color: #ffffff;
+        margin: 0 0 30px;
+        justify-items: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 30px;
+        z-index: 100;
+        position: relative; }
+        .main__category .category__item .item__wrap:nth-child(3n+2) {
+          margin: 0 30px 30px; }
+      .main__category .category__item .item__img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-height: 150px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px; }
+        .main__category .category__item .item__img img {
+          position: relative;
+          display: flex;
+          width: 100%;
+          align-items: center; }
+      .main__category .category__item .item__category {
+        position: relative;
+        display: flex;
+        color: #858585;
+        font-family: "Futura Book C";
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+        text-decoration: underline;
+        margin: 10px 0 15px; }
+        .main__category .category__item .item__category:hover {
+          color: #00adef; }
+      .main__category .category__item .item__name {
+        position: relative;
+        display: flex;
+        width: 100%;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center; }
+      .main__category .category__item .item__price {
+        margin-top: auto;
+        margin-bottom: 20px;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px; }
+        .main__category .category__item .item__price b {
+          font-family: "Futura Demi C";
+          font-size: 22px;
+          line-height: 19.3px; }
+      .main__category .category__item .item__button {
+        box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+        border-radius: 35px;
+        background-color: #00aeff;
+        color: #fefefe;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        padding: 17px 48px;
+        text-decoration: none;
+        transition: .2s;
+        text-align: center;
+        width: 100%; }
+        .main__category .category__item .item__button:hover {
+          transition: .2s;
+          background-color: #00a2ff;
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+      .main__category .category__item .item__delete {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.91);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0; }
+        .main__category .category__item .item__delete.added_to_cart {
+          display: flex; }
+        .main__category .category__item .item__delete .delete__button {
+          margin-bottom: auto;
+          position: relative;
+          display: flex;
+          color: #858585;
+          font-family: "Futura Book C";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16px;
+          margin-top: 15px;
+          align-items: center;
+          transition: .2s;
+          text-decoration: none;
+          outline: none; }
+          .main__category .category__item .item__delete .delete__button:before {
+            content: url("../img/X_icon.svg");
+            position: relative;
+            margin-right: 10px;
+            transition: .2s; }
+          .main__category .category__item .item__delete .delete__button:hover {
+            transition: .2s;
+            color: #00adef; }
+            .main__category .category__item .item__delete .delete__button:hover:before {
+              transition: .2s;
+              content: url("../img/X_icon_active.svg"); }
+        .main__category .category__item .item__delete .delete__desc {
+          color: #001334;
+          font-family: "Futura Demi C";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-bottom: auto;
+          width: 50%;
+          text-align: center; }
+    .main__category .category__pagination {
+      position: relative;
+      display: flex;
+      width: 100%;
+      border-top: 1px solid #e9e9e9;
+      padding-top: 30px;
+      align-items: center;
+      justify-content: space-between; }
+      .main__category .category__pagination .pagination__all {
+        position: relative;
+        display: flex;
+        color: #858585;
+        font-family: "Futura Book C";
+        font-size: 14px;
+        font-weight: 400; }
+      .main__category .category__pagination .pagination__pages {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+        .main__category .category__pagination .pagination__pages .pages__prev_arrow {
+          position: relative;
+          display: none;
+          fill: #bebebe;
+          margin-right: 5px; }
+          .main__category .category__pagination .pagination__pages .pages__prev_arrow.active {
+            display: flex; }
+          .main__category .category__pagination .pagination__pages .pages__prev_arrow:hover {
+            fill: #00adef; }
+        .main__category .category__pagination .pagination__pages .pages__number {
+          font-family: "Futura Book C";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          color: #02a0dd;
+          text-decoration: none;
+          margin: 0 5px; }
+          .main__category .category__pagination .pagination__pages .pages__number:hover {
+            color: #001334;
+            font-weight: 600; }
+        .main__category .category__pagination .pagination__pages .pages__next_arrow {
+          position: relative;
+          display: flex;
+          fill: #bebebe;
+          margin-left: 5px; }
+          .main__category .category__pagination .pagination__pages .pages__next_arrow:hover {
+            fill: #00adef; }
+    .main__category .category__text {
+      position: relative;
+      display: flex;
+      width: 100%;
+      margin: 100px 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .main__category .category__text .text__title {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 22.93px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .main__category .category__text .text__title hr {
+          position: absolute;
+          display: block;
+          border: 0 none;
+          border-top: 3px solid #00adef;
+          width: 65px;
+          top: -30px; }
+      .main__category .category__text .text__desc {
+        color: #636363;
+        font-family: "Futura Book C";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-top: 35px; }
+  .main__advantage {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #f8f8f8;
+    align-items: center;
+    justify-content: center; }
+    .main__advantage .advantage__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      margin: 80px 0 90px;
+      justify-content: space-around;
+      align-items: flex-start; }
+    .main__advantage .advantage__box {
+      position: relative;
+      display: flex;
+      width: 30%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+    .main__advantage .advantage__img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .main__advantage .advantage__img img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center; }
+    .main__advantage .advantage__title {
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22.93px;
+      margin: 25px 0 20px; }
+    .main__advantage .advantage__desc {
+      width: 95%;
+      color: #636363;
+      font-family: "Futura Book C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px; }
+  .main__item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0 0; }
+    .main__item .item__sidebar {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 270px;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column; }
+      .main__item .item__sidebar .sidebar__box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border: 1px solid #e9e9e9;
+        height: auto;
+        margin-bottom: 30px; }
+        .main__item .item__sidebar .sidebar__box .box__title {
+          background-color: #00adef;
+          padding: 20px 30px;
+          color: #ffffff;
+          font-family: "Futura Demi C";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px; }
+        .main__item .item__sidebar .sidebar__box .box__categ {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          padding: 15px 30px 30px; }
+          .main__item .item__sidebar .sidebar__box .box__categ .categ__link {
+            color: #001334;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 38px;
+            text-decoration: none; }
+            .main__item .item__sidebar .sidebar__box .box__categ .categ__link sup {
+              font-size: 11px; }
+            .main__item .item__sidebar .sidebar__box .box__categ .categ__link:hover {
+              font-weight: 600; }
+              .main__item .item__sidebar .sidebar__box .box__categ .categ__link:hover sup {
+                color: #00aeff;
+                font-weight: 300;
+                line-height: 38px; }
+        .main__item .item__sidebar .sidebar__box .box__price_form {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 30px; }
+          .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range {
+            outline: none;
+            width: 100%;
+            -webkit-appearance: none;
+            background-color: rgba(233, 233, 233, 0); }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-thumb {
+              -webkit-appearance: none; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range:focus {
+              outline: none;
+              /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */ }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-track {
+              width: 100%;
+              cursor: pointer;
+              background: transparent;
+              /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+              border-color: transparent;
+              color: transparent; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              border: 0 solid rgba(0, 0, 0, 0);
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #00adef;
+              cursor: ew-resize;
+              margin-top: -3px;
+              /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-thumb {
+              cursor: ew-resize;
+              box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+              border: 0 none;
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #ffffff; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-thumb {
+              cursor: ew-resize;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+              border: 0 none;
+              height: 10px;
+              width: 10px;
+              border-radius: 50%;
+              background: #ffffff; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-runnable-track {
+              width: 100%;
+              height: 8px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+              background: #00adef;
+              border-radius: 1.3px;
+              border: 0 solid #010101; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range:focus::-webkit-slider-runnable-track {
+              background: #00adef; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-track {
+              width: 100%;
+              height: 4px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+              background: #00adef;
+              border-radius: 1.3px;
+              border: 0 solid #010101; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-track {
+              cursor: ew-resize;
+              width: 100%;
+              height: 2px;
+              background: transparent;
+              border-color: transparent;
+              border-width: 16px 0;
+              color: transparent; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-lower {
+              background: #00adef;
+              border: 0 solid #010101;
+              border-radius: 2.6px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range:focus::-ms-fill-lower {
+              background: #00adef; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-upper {
+              background: #00adef;
+              border: 0 solid #010101;
+              border-radius: 2.6px;
+              box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range:focus::-ms-fill-upper {
+              background: #00adef; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-webkit-slider-runnable-track {
+              height: 4px;
+              -webkit-appearance: none;
+              color: #00adef;
+              margin-top: -1px;
+              background-color: #e9e9e9; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-progress {
+              background-color: #00adef; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-thumb {
+              background: #00adef; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-moz-range-track {
+              background-color: #e9e9e9; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-lower {
+              background-color: #e9e9e9; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range::-ms-fill-upper {
+              background-color: #00adef; }
+          .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range_value {
+            color: #858585;
+            font-family: "Futura Book C";
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 48px; }
+            .main__item .item__sidebar .sidebar__box .box__price_form .price_form__range_value .rub_icon {
+              font-size: 11px;
+              margin-left: 1px; }
+          .main__item .item__sidebar .sidebar__box .box__price_form .price_form__wrap {
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px; }
+          .main__item .item__sidebar .sidebar__box .box__price_form .price_form__input {
+            position: relative;
+            display: flex;
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #e9e9e9; }
+        .main__item .item__sidebar .sidebar__box .box__catal {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          list-style: none;
+          padding: 0 0 40px 0; }
+          .main__item .item__sidebar .sidebar__box .box__catal .put_in:after {
+            position: relative;
+            display: inline-block;
+            content: url("../img/header/arrow.svg");
+            margin-left: 10px;
+            transform: translateY(-10%); }
+          .main__item .item__sidebar .sidebar__box .box__catal li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            width: 100%; }
+          .main__item .item__sidebar .sidebar__box .box__catal .catal__point {
+            color: #001334;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            text-decoration: none;
+            margin: 0 30px 0 30px;
+            width: calc(100% - 60px); }
+            .main__item .item__sidebar .sidebar__box .box__catal .catal__point:hover {
+              font-weight: 600; }
+          .main__item .item__sidebar .sidebar__box .box__catal .catal__deep {
+            position: relative;
+            display: none;
+            flex-direction: column;
+            margin-top: 15px;
+            padding: 0 0 30px 0;
+            list-style: none;
+            background-color: #f8f8f8; }
+            .main__item .item__sidebar .sidebar__box .box__catal .catal__deep.active {
+              display: flex; }
+            .main__item .item__sidebar .sidebar__box .box__catal .catal__deep li {
+              padding-top: 20px; }
+            .main__item .item__sidebar .sidebar__box .box__catal .catal__deep .deep__point {
+              color: #001334;
+              font-family: "Futura Book C";
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 18px;
+              text-decoration: none;
+              margin: 0 30px 0 30px; }
+              .main__item .item__sidebar .sidebar__box .box__catal .catal__deep .deep__point:hover {
+                font-weight: 600; }
+            .main__item .item__sidebar .sidebar__box .box__catal .catal__deep .deep__down {
+              position: relative;
+              display: none;
+              width: 100%;
+              padding-left: 50px;
+              flex-direction: column; }
+              .main__item .item__sidebar .sidebar__box .box__catal .catal__deep .deep__down.active {
+                display: flex; }
+              .main__item .item__sidebar .sidebar__box .box__catal .catal__deep .deep__down .down__point {
+                color: #001334;
+                font-family: "Futura Book C";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18px;
+                text-decoration: underline; }
+                .main__item .item__sidebar .sidebar__box .box__catal .catal__deep .deep__down .down__point:hover {
+                  font-weight: 600; }
+      .main__item .item__sidebar .sidebar__advert {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px; }
+        .main__item .item__sidebar .sidebar__advert .advert__box {
+          position: relative;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden; }
+        .main__item .item__sidebar .sidebar__advert .advert__act {
+          position: absolute;
+          display: flex;
+          z-index: 400;
+          top: -20px;
+          left: -10px;
+          color: #ffffff;
+          font-family: "Futura Demi C";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px;
+          height: 90px;
+          width: 90px;
+          background-color: #39b61b;
+          align-content: center;
+          justify-content: center;
+          flex-direction: column;
+          border-radius: 50%;
+          text-align: center; }
+        .main__item .item__sidebar .sidebar__advert .advert__img {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          z-index: 300; }
+        .main__item .item__sidebar .sidebar__advert .advert__desc {
+          color: #001334;
+          font-family: "Futura Book C";
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          margin: 15px 0 20px; }
+        .main__item .item__sidebar .sidebar__advert .advert__button {
+          box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+          border-radius: 35px;
+          background-color: #00aeff;
+          color: #fefefe;
+          font-family: "Futura Demi C";
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.7px;
+          padding: 17px 48px;
+          text-decoration: none;
+          transition: .2s;
+          text-align: center;
+          padding: 17px 0;
+          text-align: center;
+          width: 100%; }
+          .main__item .item__sidebar .sidebar__advert .advert__button:hover {
+            transition: .2s;
+            background-color: #00a2ff;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    .main__item .item__wrap {
+      position: relative;
+      display: flex;
+      width: 72%;
+      max-width: 870px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column; }
+    .main__item .item__header {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+    .main__item .item__title {
+      width: 66%;
+      color: #001334;
+      font-family: "Futura Demi C";
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 30px; }
+    .main__item .item__links {
+      position: relative;
+      display: flex;
+      width: auto;
+      align-items: center; }
+      .main__item .item__links .links__button {
+        padding: 10px 25px;
+        border-radius: 35px;
+        border: 1px solid #e9e9e9;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #858585;
+        font-family: "Futura Book C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        text-decoration: none;
+        transition: .2s; }
+        .main__item .item__links .links__button:hover {
+          color: #00adef;
+          border: 1px solid #00adef;
+          transition: .2s; }
+          .main__item .item__links .links__button:hover .links__print {
+            fill: #00adef;
+            transition: .2s; }
+      .main__item .item__links .links__print {
+        fill: #a8a8a8;
+        margin-right: 8px;
+        transition: .2s; }
+      .main__item .item__links .links__share {
+        fill: #a8a8a8;
+        position: relative;
+        display: flex;
+        background: none;
+        padding: 10px;
+        border-radius: 50%;
+        border: 1px solid #e9e9e9;
+        margin-left: 10px;
+        transition: .2s;
+        cursor: pointer; }
+        .main__item .item__links .links__share:hover {
+          fill: #00adef;
+          transition: .2s;
+          border: 1px solid #00adef; }
+    .main__item .item__block {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 35px; }
+    .main__item .item__img {
+      position: relative;
+      display: flex;
+      width: 30%;
+      align-items: center;
+      justify-content: center; }
+      .main__item .item__img img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        max-height: 270px;
+        justify-content: center; }
+    .main__item .item__character {
+      position: relative;
+      display: flex;
+      width: 25%;
+      flex-direction: column;
+      height: 100%; }
+    .main__item .item__row {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+      .main__item .item__row span {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: max-content;
+        color: #858585;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px; }
+        .main__item .item__row span:last-child {
+          color: #001334;
+          font-weight: 600; }
+    .main__item .item__splash {
+      position: relative;
+      display: flex;
+      width: 100%;
+      border: 0 none;
+      border-bottom: 2px dotted #eee;
+      transform: translateY(215%);
+      margin: 0 1px; }
+    .main__item .item__question {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%); }
+      .main__item .item__question .question__desc {
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px; }
+      .main__item .item__question .question__link {
+        color: #39b61b; }
+        .main__item .item__question .question__link:hover {
+          text-decoration: none; }
+    .main__item .item__price {
+      position: relative;
+      display: flex;
+      width: 30%;
+      max-width: 270px;
+      max-height: 270px;
+      height: 100%;
+      border: 1px dashed #d6d6d6;
+      border-radius: 15px;
+      align-items: center;
+      justify-content: center; }
+      .main__item .item__price .price__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 150px auto; }
+      .main__item .item__price .price__title {
+        color: #000000;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px; }
+      .main__item .item__price .price__summ {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-top: 20px;
+        margin-bottom: 25px; }
+        .main__item .item__price .price__summ b {
+          font-size: 44px; }
+      .main__item .item__price .price__button {
+        box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+        border-radius: 35px;
+        background-color: #00aeff;
+        color: #fefefe;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        padding: 17px 48px;
+        text-decoration: none;
+        transition: .2s;
+        text-align: center; }
+        .main__item .item__price .price__button:hover {
+          transition: .2s;
+          background-color: #00a2ff;
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    .main__item .item__desc {
+      position: relative;
+      display: flex;
+      width: 100%;
+      list-style: none;
+      margin-top: 40px;
+      height: 100%;
+      min-height: 447px; }
+      .main__item .item__desc .desc__list {
+        position: relative;
+        display: flex;
+        width: 100%;
+        background-color: #f8f8f8;
+        border: 1px solid #e9e9e9;
+        border-bottom: 0 none;
+        padding: 0;
+        height: max-content; }
+      .main__item .item__desc .desc__point {
+        position: relative;
+        display: flex;
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        cursor: pointer;
+        padding: 15px 30px; }
+        .main__item .item__desc .desc__point.active {
+          background: white; }
+        .main__item .item__desc .desc__point sup {
+          font-size: 10px;
+          color: #00aeff;
+          margin-left: 3px; }
+      .main__item .item__desc .desc__deep {
+        top: 100%;
+        left: -1px;
+        position: absolute;
+        display: none;
+        padding: 35px 30px;
+        width: calc(100% + 2px);
+        min-height: 400px;
+        border: 1px solid #e9e9e9;
+        border-top: 0 none;
+        flex-direction: column;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 18px;
+        font-weight: 400; }
+        .main__item .item__desc .desc__deep.active {
+          display: flex; }
+        .main__item .item__desc .desc__deep p {
+          margin-bottom: 10px; }
+      .main__item .item__desc .desc__question {
+        position: relative;
+        display: flex;
+        color: #ffffff;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.93px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 13px 45px;
+        border-radius: 35px;
+        border: 2px solid #ffffff;
+        transition: .2s;
+        text-shadow: 0 0 2px black;
+        color: #00adef;
+        font-family: "Futura Demi C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        border: 2px solid #00adef;
+        text-shadow: 0 0;
+        box-shadow: 0 0;
+        padding: 10px 30px;
+        margin: 50px 0;
+        width: max-content;
+        margin: 0; }
+        .main__item .item__desc .desc__question:hover {
+          transition: .2s;
+          border: 2px solid #00adef;
+          background-color: #00adef;
+          text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+        .main__item .item__desc .desc__question:hover {
+          color: white; }
+    .main__item .item__related {
+      position: relative;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 45px;
+      min-height: 200px;
+      border-bottom: 1px solid #e9e9e9; }
+      .main__item .item__related .related__title {
+        color: #000000;
+        font-family: "Futura Demi C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 10px; }
+      .main__item .item__related .related__wrap {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 100%; }
+      .main__item .item__related .related__button {
+        position: relative;
+        display: flex;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        padding: 13px 20px;
+        background: #fff;
+        border-radius: 30px;
+        border: 1px solid #e9e9e9;
+        margin-right: 10px;
+        transition: .2s;
+        margin-bottom: 10px; }
+        .main__item .item__related .related__button:hover {
+          color: #fff;
+          background-color: #00a2ff;
+          transition: .2s; }
+    .main__item .item__adds {
+      position: relative;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      margin: 60px 0 15px;
+      align-items: center;
+      justify-content: flex-start; }
+      .main__item .item__adds .adds__title {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 22.93px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px; }
+        .main__item .item__adds .adds__title hr {
+          position: absolute;
+          display: block;
+          border: 0 none;
+          border-top: 3px solid #00adef;
+          width: 65px;
+          top: -30px; }
+      .main__item .item__adds .adds__slider {
+        width: 90%;
+        max-width: 1170px;
+        position: relative;
+        display: flex;
+        margin: 70px 0;
+        padding-bottom: 60px;
+        padding: 0; }
+        .main__item .item__adds .adds__slider .slider__dots li {
+          width: 30px;
+          height: 3px; }
+          .main__item .item__adds .adds__slider .slider__dots li button {
+            width: 30px;
+            height: 3px; }
+            .main__item .item__adds .adds__slider .slider__dots li button:before {
+              content: '';
+              width: 30px;
+              height: 3px;
+              border-bottom: 3px solid #dadada;
+              transition: .2s; }
+          .main__item .item__adds .adds__slider .slider__dots li.slick-active button:before {
+            border-bottom: 3px solid #00adef;
+            transition: .2s; }
+        .main__item .item__adds .adds__slider .slider__prev {
+          border: 2px solid #dadada;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          transition: .2s;
+          top: 50%;
+          left: -35px; }
+          .main__item .item__adds .adds__slider .slider__prev:hover {
+            transition: .2s;
+            border: 2px solid #00adef; }
+            .main__item .item__adds .adds__slider .slider__prev:hover:before {
+              border-right: 2px solid #00adef;
+              border-top: 2px solid #00adef;
+              transition: .2s; }
+          .main__item .item__adds .adds__slider .slider__prev:before {
+            position: relative;
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid #dadada;
+            border-top: 2px solid #dadada;
+            transition: .2s;
+            transform: rotate(225deg);
+            margin-left: 15%; }
+        .main__item .item__adds .adds__slider .slider__next {
+          border: 2px solid #dadada;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          transition: .2s;
+          top: 50%;
+          right: -35px; }
+          .main__item .item__adds .adds__slider .slider__next:hover {
+            transition: .2s;
+            border: 2px solid #00adef; }
+            .main__item .item__adds .adds__slider .slider__next:hover:before {
+              border-right: 2px solid #00adef;
+              border-top: 2px solid #00adef;
+              transition: .2s; }
+          .main__item .item__adds .adds__slider .slider__next:before {
+            position: relative;
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid #dadada;
+            border-top: 2px solid #dadada;
+            transition: .2s;
+            transform: rotate(45deg);
+            margin-right: 15%; }
+        .main__item .item__adds .adds__slider .slider__next {
+          right: -35px !important; }
+        .main__item .item__adds .adds__slider .slider__prev {
+          left: -35px !important; }
+      .main__item .item__adds .adds__item {
+        position: relative;
+        display: flex;
+        margin: 15px;
+        padding: 40px 30px 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; }
+      .main__item .item__adds .adds__img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 170px;
+        align-items: center;
+        justify-content: center; }
+        .main__item .item__adds .adds__img img {
+          position: relative;
+          align-items: center;
+          max-height: 100%;
+          max-width: 100%;
+          height: 100%; }
+      .main__item .item__adds .adds__name {
+        width: 100%;
+        text-align: center;
+        margin: 30px 0;
+        color: #001334;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px; }
+      .main__item .item__adds .adds__bottom {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center; }
+      .main__item .item__adds .adds__price {
+        color: #001334;
+        font-family: "Futura Demi C";
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 19.3px; }
+      .main__item .item__adds .adds__cart {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        box-shadow: 0 3px 21px rgba(0, 192, 255, 0.42);
+        border-radius: 30px;
+        background-color: #00adef;
+        outline: none; }
+        .main__item .item__adds .adds__cart:before {
+          position: relative;
+          margin-right: 3px;
+          content: url("../img/plus.svg"); }
+        .main__item .item__adds .adds__cart:hover {
+          box-shadow: 0 0; }
+      .main__item .item__adds .adds__delete {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.91);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        box-shadow: 0 3px 15px rgba(120, 120, 120, 0.15); }
+        .main__item .item__adds .adds__delete.added_to_cart {
+          display: flex; }
+        .main__item .item__adds .adds__delete .delete__button {
+          margin-bottom: auto;
+          position: relative;
+          display: flex;
+          color: #858585;
+          font-family: "Futura Book C";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16px;
+          margin-top: 15px;
+          align-items: center;
+          transition: .2s;
+          text-decoration: none;
+          outline: none; }
+          .main__item .item__adds .adds__delete .delete__button:before {
+            content: url("../img/X_icon.svg");
+            position: relative;
+            margin-right: 10px;
+            transition: .2s; }
+          .main__item .item__adds .adds__delete .delete__button:hover {
+            transition: .2s;
+            color: #00adef; }
+            .main__item .item__adds .adds__delete .delete__button:hover:before {
+              transition: .2s;
+              content: url("../img/X_icon_active.svg"); }
+        .main__item .item__adds .adds__delete .delete__desc {
+          color: #001334;
+          font-family: "Futura Demi C";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-bottom: auto;
+          width: 50%;
+          text-align: center; }
+
+.footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: #303030;
+  align-items: center;
+  justify-content: center; }
+  .footer__wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    margin: 90px 0;
+    align-items: flex-start;
+    justify-content: space-between; }
+  .footer__copyright {
+    position: relative;
+    display: flex;
+    width: max-content;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; }
+    .footer__copyright .copyright__logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 15px; }
+      .footer__copyright .copyright__logo img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: center; }
+    .footer__copyright .copyright__paid {
+      position: relative;
+      display: flex;
+      width: max-content;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 15px 0; }
+      .footer__copyright .copyright__paid .paid__desc {
+        color: #ffffff;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        align-self: flex-start; }
+      .footer__copyright .copyright__paid .paid__img {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: center; }
+    .footer__copyright .copyright__desc {
+      color: #959595;
+      font-family: "Futura Book C";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px; }
+  .footer__menu {
+    position: relative;
+    display: flex;
+    width: 18%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .footer__menu .menu__title {
+      height: 14px;
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin: 15px 0 30px; }
+    .footer__menu .menu__list {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      max-height: 100px;
+      width: max-content; }
+      .footer__menu .menu__list li {
+        margin-right: 50px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: max-content; }
+        .footer__menu .menu__list li a {
+          position: relative;
+          display: flex;
+          color: #cccccc;
+          font-family: "Futura Book C";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-decoration: none;
+          transition: .2s; }
+          .footer__menu .menu__list li a:hover {
+            text-decoration: underline;
+            color: white;
+            transition: .2s; }
+  .footer__contacts {
+    position: relative;
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .footer__contacts .contacts__title {
+      height: 14px;
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin: 15px 0 30px; }
+    .footer__contacts .contacts__address {
+      color: #ffffff;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px; }
+    .footer__contacts .contacts__phone {
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 400;
+      color: #00adef;
+      line-height: 34px;
+      text-decoration: none; }
+      .footer__contacts .contacts__phone:hover {
+        text-decoration: underline; }
+    .footer__contacts .contacts__mail {
+      color: #ffffff;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-decoration: underline; }
+      .footer__contacts .contacts__mail:hover {
+        text-decoration: none; }
+  .footer__work_time {
+    position: relative;
+    display: flex;
+    width: 16.5%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .footer__work_time .work_time__title {
+      height: 14px;
+      color: #ffffff;
+      font-family: "Futura Demi C";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin: 15px 0 30px; }
+    .footer__work_time .work_time__box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px; }
+      .footer__work_time .work_time__box .box__row {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center; }
+        .footer__work_time .work_time__box .box__row span {
+          position: relative;
+          display: flex;
+          width: 100%;
+          max-width: max-content; }
+          .footer__work_time .work_time__box .box__row span sup {
+            font-size: 10px;
+            margin-right: 3px; }
+      .footer__work_time .work_time__box .box__splash {
+        position: relative;
+        display: flex;
+        width: 100%;
+        border: 0 none;
+        border-bottom: 2px dotted #eee;
+        transform: translateY(215%);
+        margin: 0 1px; }
+    .footer__work_time .work_time__link {
+      margin-top: 10px;
+      color: #00adef;
+      font-family: "Futura Book C";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-decoration: underline; }
+      .footer__work_time .work_time__link:hover {
+        text-decoration: none; }

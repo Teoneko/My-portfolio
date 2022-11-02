@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мамазин - интернет-магазин игрушек</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rubik:700,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="src/app/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/app/bootstrap-rating-master/bootstrap-rating.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/media.css">
+    <link rel="shortcut icon" href="src/img/favicon.png" sizes="16x16">
+</head>
+<body>
+<header class="header" id="header">
+    <nav class="container-fluid navbar navbar-expand-lg bg_gradient">
+        <div class=" container collapse navbar-collapse">
+            <ul class="navbar-nav justify-content-around col-7">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">О компании</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Хотите скидку?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Блог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Бренды</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Акции и скидки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-around col-5 link-box">
+                <a href="#" class="d-flex align-items-center">Подтвердить оплату <img src="src/img/arrow.svg" alt=""></a>
+                <a href="#" class="d-flex align-items-center"><img src="src/img/ic_avatar.svg" alt=""> Войти / Зарегистрироваться</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg_l_gray pt-4 pb-4">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html"><img src="src/img/logo.png" alt=""></a>
+            <div class="callback d-inline-flex align-items-center justify-content-center">
+                <img class="mr-3" src="src/img/ic_phone.svg" alt="">
+                <a class="mr-3" href="tel:+70637050775">(063) 705 07 75</a>
+                <a class="mr-3" href="tel:+70637050775">(063) 233 55 35</a>
+                <button class="btn">Перезвонить</button>
+            </div>
+            <div class="days d-inline-flex align-items-center justify-content-center">
+                <button class="day_btn">пн</button>
+                <button class="day_btn active">вт</button>
+                <button class="day_btn">ср</button>
+                <button class="day_btn">чт</button>
+                <button class="day_btn">пт</button>
+                <button class="day_btn">сб</button>
+                <button class="day_btn">вс</button>
+                <div class="day_time ml-2">
+                    <img class="mr-1" src="src/img/clock%20icon.svg" alt="">
+                    <span>с 09:00 до 18:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex align-items-center justify-content-between">
+        <div class="dropdown">
+            <button class="btn btn-menu btn-secondary dropdown-toggle-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Каталог товаров
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <div class="d-inline-flex align-items-center justify-content-between w-75 ml-4">
+            <div class="d-inline-flex align-items-center justify-content-around w-100 position-relative menu_links pr-5">
+                <a href="#"> Мальчикам</a>
+                <a href="#"> Девочкам</a>
+                <a href="#"> Детям 0-12 месяцев</a>
+                <a href="#"> Товары для младенцев</a>
+                <button class="btn_search opener btn-outline-success position-absolute"></button>
+            </div>
+            <form class="form-inline main_form_search d-none w-100 position-relative">
+                <input class="form-control w-100" type="search" placeholder="Что вы ищете?">
+                <button class="btn_search btn-outline-success position-absolute" type="submit"></button>
+            </form>
+        </div>
+        <div class="d-inline-flex align-items-center justify-content-between ">
+            <a class="menu_link link_favorite d-inline-flex" href="#"><i class="number_green">0</i> Избранное</a>
+            <a class="menu_link link_cart d-inline-flex" href="#"><i class="number_green">0</i>Корзина</a>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <nav class="container-fluid bg-gray pt-1 mb-0 pb-1" aria-label="breadcrumb">
+        <ol class="breadcrumb bg-none container pt-5">
+            <li class="breadcrumb-item"><a href="index.html" class="txt_16 op-05">Главная страница</a></li>
+            <li class="breadcrumb-item"><a href="index.html" class="txt_16 op-05">Блог</a></li>
+            <li class="breadcrumb-item active txt_16 op-05" aria-current="page">Как выбрать стиральный порошок для детей?</li>
+        </ol>
+    </nav>
+    <section class="container-fluid bg-gray d-flex flex-column">
+        <div class="container">
+            <img class="mb-5 w-100" src="src/img/big-image.png" alt="">
+            <div class="col-8 d-flex flex-column m-auto">
+                <span class="text-black-50 txt_14 op_sans font-weight-bold pb-2">12 апреля 2019</span>
+                <h2 class="h3 pt-1 pb-2">Как выбрать стиральный порошок для детей?</h2>
+                <p class="op_sans txt_16 lh-31">
+                    Как только в доме появляется новый член семьи, практически в каждый день в стиральную машинку отправляются новые вещи. Она должна отстирывать целые горы детского белья. И пусть загрязнения в большинстве случаев белкового происхождения, справиться с бельём должен специальный порошок. Он должен бережно относиться к тканям, и впоследствии не взывать аллергической реакции на коже новорожденного.
+                </p>
+                <p class="op_sans txt_16 lh-31">
+                    Важно: выбирая детский стиральный порошок, какой лучше отстирывает пятна, многие родители упускают из вида другое свойство. Порошок должен в первую очередь заботиться о здоровье малыша. По этому, он обязательно должен быть без ярко выраженного запаха. И обязательное отсутствие фосфатов.
+                </p>
+                <p class="op_sans txt_16 lh-31">
+                    Основные требования к стиральному порошку
+                    Для этого потребуется изучить упаковку, или прочитать состав в описании в интернет-магазине. Только собственный анализ гарантирует, что в руки попадёт качественный товар от стоящего производителя. Как выбрать детский стиральный порошок, и не оказаться заложником навязчивой рекламы, расскажет этот список полезных качеств:
+                </p>
+                <p class="op_sans txt_16 lh-31">
+                    Первым делом, обратите внимание на состояние упаковки, нет ли признаков, что она побывала в воде. Не истёк ли срок годности. Как ни странно, но, для химически активных веществ это очень важно.
+                    Какой стиральный порошок лучше для детского белья и одновременно для машинки? Конечно же, в жидком состоянии. Если бюджет позволяет, и инструкция по эксплуатации машинки принимает такой вид бытовой химии, используйте его.
+                    Часть производителей делают свои порошки на основе обычного детского мыла. Они не так качественно стирают вещи, но 100% безопасны для детского организма. Используйте его для постельного белья и для нательной одежды.
+                    Никаких резких запахов, как правило, они маскируют мощный химический состав порошка. Только ненавязчивый запах природного происхождения.
+                    Кислородный обогатитель справится с безнадёжно испорченными вещами. И что самое приятное, совершенно безопасный для детских вещей. Стоит он немного дороже, но позволит экономить на порции порошка.
+                </p>
+                <p class="cite">
+                    «Є багато варіантів Lorem Ipsum, але більшість з них має не завжди прийнятні модифікації, наприклад, гумористичні вставки або слова, які навіть віддалено не схожі латинь. Якщо вам потрібен Lorem Ipsum для серйозного проекту, ви напевно не хочете який-небудь жарти, прихованої в середині абзацу. ».
+                </p>
+                <ul class="list">
+                    <li>
+                        Какое поведение сотрудников вы приветствуете независимо от его последствий?
+                    </li>
+                    <li>
+                        Как должны вести себя сотрудники во время работы над проектом?
+                    </li>
+                    <li>
+                        Как вы определяете приоритеты?
+                    </li>
+                    <li>
+                        Как вы отличаете хорошую работу от плохой?
+                    </li>
+                </ul>
+                <table class="table">
+                    <tr>
+                        <td>№</td>
+                        <td>Название ячейки_1</td>
+                        <td>Название ячейки_2</td>
+                        <td>Название ячейки_3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Название ячейки_1</td>
+                        <td>Название ячейки_2</td>
+                        <td>Название ячейки_3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Название ячейки_1</td>
+                        <td>Название ячейки_2</td>
+                        <td>Название ячейки_3</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Название ячейки_1</td>
+                        <td>Название ячейки_2</td>
+                        <td>Название ячейки_3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Название ячейки_1</td>
+                        <td>Название ячейки_2</td>
+                        <td>Название ячейки_3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-gray d-flex flex-column p-5">
+        <div class="container d-flex pt-5 pb-5 pl-0 pr-0 flex-column">
+            <div class="d-flex align-items-center justify-content-between w-100 mb-3">
+                <h3 class="h1">Интересные статьи</h3>
+                <a href="#" class="btn d-flex align-items-center txt_16 font-weight-bold ml-auto mr-5">Все статьи <i class="ml-3"></i></a>
+                <a class="carousel-prev mr-2" href="#recipeCarousel2" role="button" data-slide="prev">
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-next ml-2" href="#recipeCarousel2" role="button" data-slide="next">
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="row mt-4">
+                <div id="recipeCarousel2" class="carousel carousel-three slide w-100" data-ride="carousel">
+                    <div class="carousel-inner w-100" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-4 pb-2">
+                                <div class="d-flex w-100 flex-column bg-white border-radius-5 overflow-hidden card-shadow">
+                                    <div class="d-flex position-relative w-100 align-items-center justify-content-center">
+                                        <img class="img-fluid" src="src/img/news-image1.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-3 mb-4 pl-4 pr-4 flex-column">
+                                        <span class="txt_14 op_sans">12 апреля 2019</span>
+                                        <span class="h4_18 font-weight-bold">Игрушки для детей дошкольного возраста</span>
+                                        <span class="txt_14 op_sans">
+                                            Самое лучшее время для развития малышей, это период от 3 лет до поступления в школу. В эти несколько лет ...
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class=" col-md-4 pb-2">
+                                <div class="d-flex w-100 flex-column bg-white border-radius-5 overflow-hidden card-shadow">
+                                    <div class="d-flex position-relative w-100 align-items-center justify-content-center">
+                                        <img class="img-fluid" src="src/img/news-image2.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-3 mb-4 pl-4 pr-4 flex-column">
+                                        <span class="txt_14 op_sans">12 апреля 2019</span>
+                                        <span class="h4_18 font-weight-bold">Игрушки для детей дошкольного возраста</span>
+                                        <span class="txt_14 op_sans">
+                                            Самое лучшее время для развития малышей, это период от 3 лет до поступления в школу. В эти несколько лет ...
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class=" col-md-4 pb-2">
+                                <div class="d-flex w-100 flex-column bg-white border-radius-5 overflow-hidden card-shadow">
+                                    <div class="d-flex position-relative w-100 align-items-center justify-content-center">
+                                        <img class="img-fluid" src="src/img/news-image3.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-3 mb-4 pl-4 pr-4 flex-column">
+                                        <span class="txt_14 op_sans">12 апреля 2019</span>
+                                        <span class="h4_18 font-weight-bold">Игрушки для детей дошкольного возраста</span>
+                                        <span class="txt_14 op_sans">
+                                            Самое лучшее время для развития малышей, это период от 3 лет до поступления в школу. В эти несколько лет ...
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class=" col-md-4 pb-2">
+                                <div class="d-flex w-100 flex-column bg-white border-radius-5 overflow-hidden card-shadow">
+                                    <div class="d-flex position-relative w-100 align-items-center justify-content-center">
+                                        <img class="img-fluid" src="src/img/news-image2.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-3 mb-4 pl-4 pr-4 flex-column">
+                                        <span class="txt_14 op_sans">12 апреля 2019</span>
+                                        <span class="h4_18 font-weight-bold">Игрушки для детей дошкольного возраста</span>
+                                        <span class="txt_14 op_sans">
+                                            Самое лучшее время для развития малышей, это период от 3 лет до поступления в школу. В эти несколько лет ...
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class=" col-md-4 pb-2">
+                                <div class="d-flex w-100 flex-column bg-white border-radius-5 overflow-hidden card-shadow">
+                                    <div class="d-flex position-relative w-100 align-items-center justify-content-center">
+                                        <img class="img-fluid" src="src/img/news-image3.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-3 mb-4 pl-4 pr-4 flex-column">
+                                        <span class="txt_14 op_sans">12 апреля 2019</span>
+                                        <span class="h4_18 font-weight-bold">Игрушки для детей дошкольного возраста</span>
+                                        <span class="txt_14 op_sans">
+                                            Самое лучшее время для развития малышей, это период от 3 лет до поступления в школу. В эти несколько лет ...
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class=" col-md-4 pb-2">
+                                <div class="d-flex w-100 flex-column bg-white border-radius-5 overflow-hidden card-shadow">
+                                    <div class="d-flex position-relative w-100 align-items-center justify-content-center">
+                                        <img class="img-fluid" src="src/img/news-image1.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-3 mb-4 pl-4 pr-4 flex-column">
+                                        <span class="txt_14 op_sans">12 апреля 2019</span>
+                                        <span class="h4_18 font-weight-bold">Игрушки для детей дошкольного возраста</span>
+                                        <span class="txt_14 op_sans">
+                                            Самое лучшее время для развития малышей, это период от 3 лет до поступления в школу. В эти несколько лет ...
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer class="footer bg-dbl-black">
+    <div class="d-flex container-fluid pr-5 pl-5 pt-5 pb-4">
+        <div class="container d-flex pl-0 pr-0 pt-2 pb-0 position-relative">
+            <a href="#header" class="position-absolute d-flex align-items-center justify-content-center right mr-5 footer-arrow">
+                <img src="src/img/arrow-white.svg" alt="">
+            </a>
+            <div class="d-flex flex-column col-2">
+                <span class="txt_18 rubik mb-1">Информация</span>
+                <a href="#" class="txt_14 lh-31 op_sans">О компании</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Оплата и доставка</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Скидки</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Бренды</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Контакты</a>
+                <a href="all_category.html" class="txt_14 lh-31 op_sans">Каталог</a>
+            </div>
+            <div class="d-flex flex-column col-2">
+                <span class="txt_18 rubik mb-1">Пользователю</span>
+                <a href="#" class="txt_14 lh-31 op_sans">Вход</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Регистрация</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Обратный звонок</a>
+                <a href="#" class="txt_14 lh-31 op_sans">Я отправил(а) заказ</a>
+            </div>
+            <div class="d-flex flex-column col-2">
+                <span class="txt_18 rubik mb-1">Контакты</span>
+                <a href="#" class="txt_14 lh-31 op_sans">(097) 88-222-10</a>
+                <a href="#" class="txt_14 lh-31 op_sans">(099) 95-622-08</a>
+                <a href="#" class="txt_14 lh-31 op_sans">(099) 95-622-08</a>
+                <a href="#" class="txt_14 lh-31 op_sans mt-1">info@mamazin.com,ua</a>
+            </div>
+            <div class="d-flex ml-auto flex-column col-5 pr-0">
+                <span class="txt_18 rubik mb-1">Подписка</span>
+                <span class="txt_14 op_sans w-75">Оставьте свою почту и получайте информацию о
+                    ближайших скидках и акциях
+                </span>
+                <div class="input-group mt-4">
+                    <input type="text" class="form-control bg-op01 border-radius-50 h-auto pl-4 pt-3 pr-2 pb-3" placeholder="Введтите ваш Email" aria-label="Введтите ваш Email" aria-describedby="button-addon3">
+                    <button class="position-absolute right btn btn-outline-secondary border-radius-50 mt-1 mr-1 mb-1" type="button" id="button-addon3">Подписаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr-gray w-100">
+    <div class="d-flex container-fluid pb-3">
+        <div class="container d-flex pl-0 pr-0 justify-content-between align-items-center">
+            <span class="txt_14 lh-31 op_sans col-6">
+                © 2008 — 2019. Интернет магазин. Все права защищены
+            </span>
+            <div class="d-flex col-3 justify-content-end pr-0">
+                <a href="#" class="bg-op01 border-radius-50 soc-ic d-flex align-items-center justify-content-center mr-2">
+                    <img src="src/img/sc-facebook_ic.png" alt="">
+                </a>
+                <a href="#" class="bg-op01 border-radius-50 soc-ic d-flex align-items-center justify-content-center ml-2 mr-2">
+                    <img src="src/img/sc-instagram_ic.png" alt="">
+                </a>
+                <a href="#" class="bg-op01 border-radius-50 soc-ic d-flex align-items-center justify-content-center ml-2">
+                    <img src="src/img/sc-youtube_ic.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="src/app/jq/jquery.min.js"></script>
+<script src="src/app/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="src/app/bootstrap-rating-master/bootstrap-rating.min.js"></script>
+<script src="src/js/scripts.js"></script>
+</html>

@@ -1,0 +1,47 @@
+&__intro{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 31.041vw;
+  background: url("../img/header_main_background.png") top center no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  & .intro{
+
+    &__title{
+      color: $dark_blue;
+      font-family: "Futura Demi C";
+      font-size: 64px;
+      font-weight: 400;
+      margin-bottom: 17px;
+      text-align: center;
+      & br{
+        display: none;
+      }
+    }
+    &__subtitle{
+      color: $dark_blue;
+      font-family: "Futura Book C";
+      font-size: 28px;
+      font-weight: 400;
+      margin: 17px 0 60px;
+    }
+    &__button{
+      @include button_feel;
+      border: 0 none;
+      outline: none;
+    }
+  }
+}
+
+&__wrap{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,235 @@
+.footer{
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: #303030;
+  align-items: center;
+  justify-content: center;
+  &__wrap{
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    margin: 90px 0;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__copyright{
+    position: relative;
+    display: flex;
+    width: max-content;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    & .copyright{
+
+      &__logo{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+        & img{
+          position: relative;
+          display: flex;
+          width: 100%;
+          align-items: center;
+        }
+      }
+      &__paid{
+        position: relative;
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 15px 0;
+        & .paid{
+          &__desc{
+            color: #ffffff;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            align-self: flex-start;
+          }
+          &__img{
+            position: relative;
+            display: flex;
+            width: 100%;
+            align-items: center;
+          }
+        }
+      }
+      &__desc{
+        color: #959595;
+        font-family: "Futura Book C";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+  &__menu{
+    position: relative;
+    display: flex;
+    width: 18%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    & .menu{
+      &__title{
+        @include footer_menu_title;
+      }
+      &__list{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        max-height: 100px;
+        width: max-content;
+        & li{
+          margin-right: 50px;
+          position: relative;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          width: max-content;
+          & a{
+            position: relative;
+            display: flex;
+            color: #cccccc;
+            font-family: "Futura Book C";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-decoration: none;
+            transition: .2s;
+            &:hover{
+              text-decoration: underline;
+              color: white;
+              transition: .2s;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__contacts{
+    position: relative;
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    & .contacts{
+
+      &__title{
+        @include footer_menu_title;
+      }
+      &__address{
+        color: #ffffff;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      &__phone{
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        color: #00adef;
+        line-height: 34px;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &__mail{
+        color: #ffffff;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__work_time{
+    position: relative;
+    display: flex;
+    width: 16.5%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    & .work_time{
+
+      &__title{
+        @include footer_menu_title;
+      }
+      &__box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        & .box{
+          &__row{
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            & span{
+              position: relative;
+              display: flex;
+              width: 100%;
+              max-width: max-content;
+              & sup{
+                font-size: 10px;
+                margin-right: 3px;
+              }
+            }
+          }
+          &__splash{
+            position: relative;
+            display: flex;
+            width: 100%;
+            border: 0 none;
+            border-bottom: 2px dotted #eee;
+            transform: translateY(215%);
+            margin: 0 1px;
+          }
+        }
+      }
+      &__link{
+        margin-top: 10px;
+        color: $light_blue;
+        font-family: "Futura Book C";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

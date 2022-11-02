@@ -1,0 +1,48 @@
+@import "src/mixin/mixin";
+@import "src/keyframe/keyframe";
+*, *:after, *:before{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  z-index: 1;
+  scroll-behavior: smooth;
+  background: rgba(255, 255, 255, 0);
+}
+body, header, main, footer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section{
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 60px);
+  margin-left: 60px;
+}
+footer{
+  width: calc(100% - 60px);
+  margin-left: 60px;
+}
+header{
+  background: $sup_color;
+  height: 130px;
+}
+@import "header/menu";
+@import "header/header";
+@import "main/slider";
+@import "main/crumbs";
+@import "main/tour-pack";
+@import "main/places";
+@import "footer/form";
+@import "footer/wrapper";
+

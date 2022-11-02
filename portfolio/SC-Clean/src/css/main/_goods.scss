@@ -1,0 +1,42 @@
+&__goods{
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: rgba(245, 245, 245, 0);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 115px 0 75px;
+  & .goods {
+
+    &__title {
+      @include section_title;
+    }
+
+    &__wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 1170px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      margin: 55px 0 45px;
+    }
+
+    &__box {
+      position: relative;
+      display: flex;
+      width: 47.5%;
+      height: 100%;
+      margin: 15px 0;
+
+      & .box {
+        @include main_item_box;
+      }
+    }
+    &__more {
+      @include section_more;
+    }
+  }
+}

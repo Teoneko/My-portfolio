@@ -1,0 +1,27 @@
+.main{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @import "intro";
+  @import "why_us";
+  @import "service";
+  @import "goods";
+  @import "price";
+  @import "clients";
+  @import "reviews";
+  @import "partners";
+  @import "text";
+  @import "request";
+  @import "header";
+  @import "contacts";
+  @import "form";
+  @import "map";
+  @import "category";
+  @import "advantage";
+  @import "item";
+}

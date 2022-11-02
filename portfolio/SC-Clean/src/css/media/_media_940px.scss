@@ -1,0 +1,141 @@
+@media screen and (max-width: 1200px){
+
+  .header{
+
+    &__info{
+
+      max-width: 940px;
+    }
+    &__nav{
+      max-width: 940px;
+
+      & .nav{
+
+        &__menu{
+          display: flex;
+        }
+        &__points{
+          display: none;
+        }
+        &__search{
+          width: 77%;
+        }
+      }
+    }
+    &__cart .cart__preview{
+      right: -45px;
+    }
+  }
+
+  .main{
+
+    &__intro{
+
+      min-height: 475px;
+
+    }
+
+    & .intro{
+
+      &__title{
+
+        & br{
+          display: block;
+        }
+      }
+    }
+    & .service{
+
+      &__wrap{
+        max-width: 980px;
+      }
+      &__box .box__title{
+        width: 75%;
+        line-height: 28px;
+      }
+    }
+    & .goods{
+
+      &__wrap{
+        max-width: 980px;
+      }
+      &__box .box__title{
+        width: 75%;
+        line-height: 28px;
+      }
+    }
+
+    & .price{
+
+      &__wrap{
+        max-width: 980px;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+      &__box{
+        width: 33%;
+        margin: 10px;
+        padding: 60px 30px;
+      }
+    }
+    & .clients{
+
+      &__slider{
+        width: 80%;
+      }
+      &__text{
+        width: 90%;
+      }
+    }
+    & .reviews{
+
+      &__slider{
+        width: 80%;
+      }
+    }
+
+    & .slider__next{
+      right: -50px!important;
+    }
+    & .slider__prev{
+      left: -50px!important;
+    }
+
+    &__partners{
+      width: 90%;
+    }
+    &__text{
+      width: 90%;
+    }
+    &__request .request__form {
+      width: 90%;
+      & input{
+        width: 28%;
+        margin: 0 5px;
+      }
+    }
+  }
+  .footer{
+
+    &__wrap{
+      width: 90%;
+    }
+    &__menu .menu__list li {
+      margin-right: 30px;
+    }
+    &__work_time .work_time__box .box__row span {
+      width: 125%;
+    }
+  }
+  .main__contacts .contacts__wrap{
+    width: 90%;
+  }
+  .main__category .category__item{
+    justify-content: space-between;
+  }
+  .main__category .category__item .item__wrap:nth-child(3n+2) {
+    margin: 0 0 30px;
+  }
+}
